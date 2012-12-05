@@ -95,7 +95,7 @@ module.exports = function( grunt ) {
     },
 
     server: {
-      app: 'clean lint recess watch'
+      app: 'clean recess watch'
     },
 
     // Below, all paths are relative to the staging directory, which is a copy
