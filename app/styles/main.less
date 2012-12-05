@@ -1,0 +1,242 @@
+@import "../components/tgm-bootstrap/less/tgm-bootstrap.less";
+
+@cambria: Cambria, George, Times, serif;
+
+#viz {
+    @green: #1aab45;
+    @blue: #0066cc;
+    @orange: #fd8939;
+    @yellow: #f3bf07;
+
+    .fill-green  { fill: @green; }
+    .fill-blue   { fill: @blue; }
+    .fill-orange { fill: @orange; }
+    .fill-yellow { fill: @yellow; }
+}
+
+p {
+    .font-size(14);
+}
+
+h2.strikeout {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: @cambria;
+    .font-size(26);
+    width: 100%;
+    overflow: display;
+
+    span {
+        display: inline-block;
+        background-color: white;
+        padding: 0 10px;
+    }
+
+    &:before {
+        content: '';
+        border-bottom: 1px solid @textColor;
+        display: block;
+        position: relative;
+        top: 20px;
+        z-index: -5;
+    }
+}
+
+header nav .navbar-inner {
+
+    .brand {
+        margin-left: 0;
+    }
+
+    .special-feature {
+        font-family: 'Bell MT', @headingsFontFamily;
+        .font-size(22);
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 18px 0 0;
+        line-height: 22px;
+    }
+
+    .btn-group {
+        margin-right: 20px;
+
+        .btn {
+            background-color: @navbarInverseBackground;
+            border: 1px solid @grayDark;
+            .box-shadow(none);
+            .font-size(12);
+            font-weight: normal;
+
+            &.share-btn {
+                background-image: url(/images/icon-share.png);
+                background: @navbarInverseBackground url(/images/icon-share.svg) 6px center no-repeat;
+                background-size: 15px 15px;
+                padding-left: 27px;
+            }
+
+            &:hover {
+                background-color: lighten(@navbarInverseBackground, 10%);
+                border-color: lighten(@grayDark, 10%);
+                color: @white;
+            }
+        }
+
+        object {
+            position: relative;
+            top: 3px;
+            left: -4px;
+        }
+    }
+}
+
+.banner-line (@width: 290px) {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: @white;
+    position: absolute;
+    width: @width;
+}
+
+.intro-banner {
+    background: url(/images/intro-pic.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    margin-top: 55px;
+    height: 670px;
+
+    .drop {
+        position: absolute;
+        width: 32px;
+        left: 50%;
+        margin-left: -16px;
+        top: 220px;
+    }
+
+    h1 {
+        color: @white;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        .font-size(70);
+        top: 284px;
+        text-transform: uppercase;
+
+        &:before {
+            .banner-line();
+            top: -44px;
+            right: 50%;
+            margin-right: 40px;
+        }
+
+        &:after {
+            .banner-line();
+            top: -44px;
+            left: 50%;
+            margin-left: 40px;
+        }
+    }
+
+    h2 {
+        font-family: "Georgia", Times, serif;
+        color: @white;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 330px;
+        font-weight: 300;
+        .font-size(20);
+        font-style: italic;
+
+        &:before {
+            .banner-line(200px);
+            top: 21px;
+            right: 50%;
+            margin-right: 130px;
+        }
+
+        &:after {
+            .banner-line(200px);
+            top: 21px;
+            left: 50%;
+            margin-left: 130px;
+        }
+    }
+}
+
+#main {
+    position: relative;
+}
+
+#river-container {
+    position: absolute;
+    top: -20px;
+    z-index: -10;
+}
+
+#introduction {
+    margin-top: 30px;
+    position: relative;
+
+    h1 {
+        font-family: Cambria, George, Times, serif;
+        .font-size(45);
+        color: @black;
+        margin: 30px 0;
+    }
+
+    .leadin {
+        .font-size(18);
+        color: @black;
+        margin: 15px 0;
+        line-height: 1.2;
+    }
+
+    #basin-location {
+        position: absolute;
+        top: 70px;
+
+        iframe {
+            border: 10px solid white;
+            .box-shadow(2px 5px 17px fadeout(@grayDark, 60%), inset 0 0 5px fadeout(@grayDark, 10%));
+        }
+    }
+}
+
+.graph {
+    .blue   { #viz > .fill-blue;   }
+    .green  { #viz > .fill-green;  }
+    .orange { #viz > .fill-orange; }
+    .yellow { #viz > .fill-yellow; }
+
+    .bar-stripes {
+        fill: url(/images/bar-stripes.png);
+    }
+}
+
+#length-graph-container {
+    .length {
+        .font-size(30);
+        font-family: @sansFontFamily;
+        font-style: italic;
+        fill: @grayLight;
+    }
+
+    .length.first {
+        font-weight: bold;
+    }
+
+    .name {
+        text-transform: uppercase;
+        font-weight: bold;
+        .font-size(12);
+    }
+
+    .location {
+        text-transform: uppercase;
+        .font-size(12);
+    }
+}
+
+@import "responsive.less";
