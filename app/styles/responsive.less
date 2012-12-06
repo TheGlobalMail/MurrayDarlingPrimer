@@ -1,4 +1,8 @@
 @media only screen and (max-width: 950px) {
+    .container {
+        width: 100%;
+    }
+
     .intro-banner {
         height: 410px;
 
@@ -22,8 +26,9 @@
         }
 
         h2 {
-            top: 200px;
+            top: 210px;
             .font-size(16);
+            line-height: 1.8;
 
             &:before {
                 width: 128px;
@@ -38,4 +43,50 @@
             }
         }
     }
+
+    #river-container {
+        display: none;
+    }
+
+    .row-fluid  {
+        margin: 0 auto;
+    }
+    .row-fluid .span4 {
+        width: 0;
+
+    }
+
+    .row-fluid .offset1 {
+        margin: 0 auto;
+        float: none;
+        width: 80%;
+    }
+
+    .row-fluid .offset5:first-child {
+        margin: 0 auto;
+        float: none;
+        width: 80%;
+    }
 }
+
+@media only screen and (max-width: 650px) {
+
+        .intro-banner {
+        h1 {
+            .font-size(50);
+        }
+        h2 {
+            top: 240px;
+            line-height: 1.8;
+        }
+        }
+
+        #introduction {
+
+        h1 {
+            .font-size(35);
+            line-height: 1.1;
+            margin: 15px 0;
+        }
+    }
+ }
