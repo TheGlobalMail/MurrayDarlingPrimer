@@ -1,4 +1,4 @@
-define(['d3', 'lodash', 'jquery'], function(d3, _, $) {
+define(['d3', 'lodash', 'jquery', 'jquery.scrollwatch'], function(d3, _, $) {
   'use strict';
 
   var RiverSystemLength = {
@@ -19,6 +19,7 @@ define(['d3', 'lodash', 'jquery'], function(d3, _, $) {
     var totalBarHeight = 65;
     var graphWidth = 540;
     var max = _.chain(data).pluck('length').max().value();
+    var $graph = $('#length-graph-container');
     var graph = d3.select('#length-graph-container')
       .append('svg')
       .attr('width', graphWidth)
@@ -49,7 +50,7 @@ define(['d3', 'lodash', 'jquery'], function(d3, _, $) {
         .attr('xlink:href', '/images/bar-stripes.png')
         .attr('height', 30)
         .attr('width', 303)
-        .attr('x', 20).attr('y', 0);
+        .attr('x', 0).attr('y', 0);
 
     // bar background
     g.append('rect')
@@ -59,13 +60,23 @@ define(['d3', 'lodash', 'jquery'], function(d3, _, $) {
       .attr('fill', 'url(#barstripesbackground)');
 
     // bars
-    g.append('rect')
+    var bars = g.append('rect')
       .attr('y', function(d, i) { return i * totalBarHeight + (totalBarHeight - 20); })
       .attr('width', 0)
       .attr('height', 20)
-      .attr('class', yoink('color'))
-      .transition()
-      .attr('width', x('length'));
+      .attr('class', yoink('color'));
+
+    $graph.scrollWatch({ delay: 200 })
+      .on('scrollin', function(e) {
+        if (bars.attr('width') == 0) {
+          bars.transition().ease('cubic-out').attr('width', x('length'));
+        }
+      })
+      .on('scrollout', function(e) {
+        if (e.direction === 'up') {
+          bars.attr('width', 0);
+        }
+      }).handleScroll();
 
     var textWidths = [];
 
