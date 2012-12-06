@@ -1,4 +1,5 @@
 @import "../components/tgm-bootstrap/less/tgm-bootstrap.less";
+@import "navbar.less";
 
 @cambria: Cambria, George, Times, serif;
 
@@ -42,53 +43,6 @@ h2.strikeout {
     }
 }
 
-header nav .navbar-inner {
-
-    .brand {
-        margin-left: 0;
-    }
-
-    .special-feature {
-        font-family: 'Bell MT', @headingsFontFamily;
-        .font-size(22);
-        text-transform: uppercase;
-        display: inline-block;
-        padding: 18px 0 0;
-        line-height: 22px;
-    }
-
-    .btn-group {
-        margin-right: 20px;
-
-        .btn {
-            background-color: @navbarInverseBackground;
-            border: 1px solid @grayDark;
-            .box-shadow(none);
-            .font-size(12);
-            font-weight: normal;
-
-            &.share-btn {
-                background-image: url(/images/icon-share.png);
-                background: @navbarInverseBackground url(/images/icon-share.svg) 6px center no-repeat;
-                background-size: 15px 15px;
-                padding-left: 27px;
-            }
-
-            &:hover {
-                background-color: lighten(@navbarInverseBackground, 10%);
-                border-color: lighten(@grayDark, 10%);
-                color: @white;
-            }
-        }
-
-        object {
-            position: relative;
-            top: 3px;
-            left: -4px;
-        }
-    }
-}
-
 .banner-line (@width: 290px) {
     content: '';
     display: block;
@@ -102,7 +56,7 @@ header nav .navbar-inner {
     background: url(/images/intro-pic.jpg) no-repeat center center;
     background-size: cover;
     position: relative;
-    margin-top: 55px;
+    margin-top: 24px;
     height: 670px;
 
     .drop {
