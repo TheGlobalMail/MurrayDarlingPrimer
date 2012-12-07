@@ -13,6 +13,16 @@ require.config({
     'jquery.scrollwatch': {
         exports: 'ScrollWatch',
         deps: ['jquery']
+    },
+    accouting: {
+        exports: 'accounting'
+    },
+    TweenMax: {
+        exports: 'TweenMax'
+    },
+    superscrollorama: {
+        exports: '$.superscrollorama',
+        deps: ['TweenMax']
     }
   },
 
@@ -21,11 +31,14 @@ require.config({
     d3: '/components/d3/d3.v2',
     backbone: '/components/backbone/backbone',
     lodash: '/components/lodash/lodash',
-    'jquery.scrollwatch': '/vendor/jquery.scrollwatch'
+    'jquery.scrollwatch': '/vendor/jquery.scrollwatch',
+    accounting: '/components/accounting/accounting',
+    TweenMax: '/components/superscrollorama/js/greensock/TweenMax.min',
+    superscrollorama: '/components/superscrollorama/js/jquery.superscrollorama'
   }
 });
 
-require(['app'], function() {
+require(['/vendor/classList.js', 'app'], function() {
   'use strict';
 
 

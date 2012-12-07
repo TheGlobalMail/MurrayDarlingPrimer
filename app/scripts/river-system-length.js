@@ -1,4 +1,4 @@
-define(['d3', 'lodash', 'jquery', 'jquery.scrollwatch'], function(d3, _, $) {
+define(['d3', 'lodash', 'jquery', 'accounting', 'jquery.scrollwatch'], function(d3, _, $, accounting) {
   'use strict';
 
   var RiverSystemLength = {
@@ -86,10 +86,10 @@ define(['d3', 'lodash', 'jquery', 'jquery.scrollwatch'], function(d3, _, $) {
       .attr('x', graphWidth)
       .attr('text-anchor', 'end')
       .attr('class', 'length')
-      .text(yoink('length', function(l) { return l + "km" }))
+      .text(yoink('length', function(l) { return accounting.formatNumber(l) + "km" }))
       .each(function(d, i) {
         if (i === 0) {
-          this.classList.add('first');
+          this.setAttribute('class', this.getAttribute('class') + " first");
         }
       });
 
@@ -98,7 +98,7 @@ define(['d3', 'lodash', 'jquery', 'jquery.scrollwatch'], function(d3, _, $) {
       .attr('y', function(d, i) { return i * totalBarHeight + 40 })
       .attr('x', 0)
       .attr('class', 'name')
-      .text(yoink('name'))
+      .text(yoink('name', function(t) { return t.toUpperCase(); }))
       .each(function(d, i) {
         textWidths[i] = this.getBBox().width;
       });
@@ -108,7 +108,7 @@ define(['d3', 'lodash', 'jquery', 'jquery.scrollwatch'], function(d3, _, $) {
       .attr('y', function(d, i) { return (i+1) * totalBarHeight + 40 })
       .attr('x', function(d, i) { return textWidths[i+1] + 5; })
       .attr('class', 'location')
-      .text(yoink('location', function(t) { return '(' + t + ')'; }));
+      .text(yoink('location', function(t) { return '(' + t.toUpperCase() + ')'; }));
   };
 
   return RiverSystemLength;

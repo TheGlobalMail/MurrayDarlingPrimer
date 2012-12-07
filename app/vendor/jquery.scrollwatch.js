@@ -74,12 +74,7 @@
         this.trigger('scrollin');
       } else if (this.inViewport && !inViewport) {
         this.inViewport = false;
-
-        if (this.dfd) {
-          this.dfd.done(_.bind(this.trigger, this, 'scrollout'))
-        } else {
-          this.trigger('scrollout');
-        }
+        this.trigger('scrollout');
       }
 
       return this;

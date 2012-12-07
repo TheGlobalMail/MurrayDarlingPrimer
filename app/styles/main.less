@@ -15,6 +15,10 @@
     .fill-yellow { fill: @yellow; }
 }
 
+.invisible {
+    .opacity(0);
+}
+
 p {
     .font-size(16);
     color: @gray;
@@ -126,7 +130,7 @@ h2.strikeout {
 
 #river-container {
     position: absolute;
-    top: -20px;
+    top: 0px;
     z-index: -10;
 }
 
@@ -158,37 +162,131 @@ h2.strikeout {
     }
 }
 
-.graph {
-    .blue   { #viz > .fill-blue;   }
-    .green  { #viz > .fill-green;  }
-    .orange { #viz > .fill-orange; }
-    .yellow { #viz > .fill-yellow; }
+#its-long {
+    margin-bottom: 30px;
 
-    .bar-stripes {
-        fill: url(/images/bar-stripes.png);
+    .graph {
+        .blue   { #viz > .fill-blue;   }
+        .green  { #viz > .fill-green;  }
+        .orange { #viz > .fill-orange; }
+        .yellow { #viz > .fill-yellow; }
+
+        .bar-stripes {
+            fill: url(/images/bar-stripes.png);
+        }
+    }
+
+    #length-graph-container {
+        .length {
+            .font-size(30);
+            font-family: @sansFontFamily;
+            font-style: italic;
+            fill: @grayLight;
+        }
+
+        .length.first {
+            font-weight: bold;
+        }
+
+        .name {
+            font-weight: bold;
+            .font-size(12);
+        }
+
+        .location {
+            .font-size(12);
+        }
     }
 }
 
-#length-graph-container {
-    .length {
-        .font-size(30);
-        font-family: @sansFontFamily;
-        font-style: italic;
-        fill: @grayLight;
+
+#and-its-big > div {
+    position: relative;
+    height: 420px;
+
+    .info {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 190px;
+        .font-size(14);
     }
 
-    .length.first {
-        font-weight: bold;
-    }
-
-    .name {
-        text-transform: uppercase;
-        font-weight: bold;
+    .map {
+        position: absolute;
         .font-size(12);
+        font-weight: bold;
+        .box-sizing(border-box);
+        line-height: 1;
+        color: white;
+        text-transform: uppercase;
+
+        strong {
+            display: block;
+            .font-size(40);
+            position: absolute;
+            font-style: italic;
+            word-wrap: break-word;
+            letter-spacing: -1px;
+            line-height: 0.9;
+            font-weight: 900;
+        }
+
+        em {
+            display: block;
+            position: absolute;
+            text-transform: lowercase;
+            font-weight: bold;
+            .font-size(14);
+            line-height: 1;
+        }
     }
 
-    .location {
-        text-transform: uppercase;
+    @mapOffsetTop: 0px;
+    @mapOffsetLeft: 100px;
+
+    .murray-map {
+        top: 100px + @mapOffsetTop;
+        left: @mapOffsetLeft;
+        background: url(/images/murray-darling-outline.png) no-repeat center center;
+        width: 249px;
+        height: 271px;
+        padding: 106px 10px 0 94px;
+
+        strong {
+            top: 130px;
+            left: 85px;
+            width: 120px;
+        }
+
+        em {
+            top: 187px;
+            left: 152px;
+        }
+    }
+
+    .france-map {
+        top: 214px + @mapOffsetTop;
+        background: url(/images/france-outline.png) no-repeat center center;
+        left: 200px + @mapOffsetLeft;
+        width: 213px;
+        height: 177px;
+        padding: 42px 0 0 70px;
+
+        strong {
+            width: 90px;
+        }
+
+        em {
+            top: 109px;
+            left: 137px;
+        }
+    }
+}
+
+#production-percentage-chart {
+    .produce-name {
+        font-weight: bold;
         .font-size(12);
     }
 }
