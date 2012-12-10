@@ -14,7 +14,6 @@ define(['d3', 'lodash', 'jquery', 'accounting', 'jquery.scrollwatch'], function(
 
   var data = RiverSystemLength.data;
 
-
   RiverSystemLength.init = function() {
     var totalBarHeight = 65;
     var graphWidth = 540;
@@ -111,5 +110,6 @@ define(['d3', 'lodash', 'jquery', 'accounting', 'jquery.scrollwatch'], function(
       .text(yoink('location', function(t) { return '(' + t.toUpperCase() + ')'; }));
   };
 
+  RiverSystemLength.init();
   return RiverSystemLength;
 });

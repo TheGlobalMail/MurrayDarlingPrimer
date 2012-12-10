@@ -17,12 +17,9 @@ require.config({
     accouting: {
         exports: 'accounting'
     },
-    TweenMax: {
-        exports: 'TweenMax'
-    },
-    superscrollorama: {
-        exports: '$.superscrollorama',
-        deps: ['TweenMax']
+    scrollorama: {
+        exports: '$.scrollorama',
+        deps: ['jquery']
     }
   },
 
@@ -33,8 +30,7 @@ require.config({
     lodash: '/components/lodash/lodash',
     'jquery.scrollwatch': '/vendor/jquery.scrollwatch',
     accounting: '/components/accounting/accounting',
-    TweenMax: '/components/superscrollorama/js/greensock/TweenMax.min',
-    superscrollorama: '/components/superscrollorama/js/jquery.superscrollorama'
+    scrollorama: '/components/jquery.scrollorama/js/jquery.scrollorama'
   }
 });
 

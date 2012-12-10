@@ -1,20 +1,20 @@
-define(['jquery', 'TweenMax', 'superscrollorama'], function($, TweenMax) {
+define(['jquery', 'scrollcontroller'], function($, scrollorama) {
   'use strict';
 
   var $drop = $('.drop');
   var $headings = $('h1, h2', '.intro-banner');
-  var $main = $('#content-container').fadeTo(0, 0.1);
-  var controller = $.superscrollorama()
+  var $main = $('.fade-wrapper').fadeTo(0, 0);
 
-  var pins = new TimelineLite({ useFrames: true, delay: -10 });
-  var fadeOut = TweenMax.to($headings, 0.1, { css: { opacity: 0 } });
-  var fadeIn  = TweenMax.to($main, 0.1, { css: { opacity: 1 } });
+  scrollorama.animate($headings, {
+    duration: 160, property: 'opacity', end: 0
+  });
 
-  // fade headings out
-  controller.addTween($headings, fadeOut, 200, 190);
+  scrollorama.animate($drop, {
+    duration: 200, property: 'padding-top', end: 450, delay: 170
+  });
 
-  // pin drop
-  pins.append(TweenMax.to($drop, 0.5, { css: { marginTop: 190 } }));
-  controller.pin($drop, 500, { anim: pins, offset: -60, onUnpin: function() { $main.fadeIn(); } });
+  scrollorama.animate($main, {
+    duration: 30, property: 'opacity', end: 1, delay: 605
+  });
 
 });

@@ -83,11 +83,25 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
         }
       }).handleScroll();
 
+    var textWidths = [];
+
     g.append('text')
-      .attr('y', function(d, i) { return i * totalRowHeight + 36 })
+      .attr('y', function(d, i) { return i * totalRowHeight + 36; })
       .attr('x', imageWidth)
       .attr('class', 'produce-name')
-      .text(yoink('name', function(t) { return t.toUpperCase(); }));
+      .text(yoink('name', function(t) { return t.toUpperCase(); }))
+      .each(function(d) {
+        if (d.note) {
+          textWidths.push(this.getBBox().width);
+        }
+      });
+
+    g.filter(function(d) { return d.note; }).append('text')
+      .attr('y', function(d, i) { return _.indexOf(data, d) * totalRowHeight + 36; })
+      .attr('x', function(d, i) { return imageWidth + textWidths[i] + 5; })
+      .attr('class', 'produce-note')
+      .text(yoink('note'));
+
   }
 
   init();

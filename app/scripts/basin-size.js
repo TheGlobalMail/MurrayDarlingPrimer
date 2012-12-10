@@ -1,14 +1,16 @@
-define(['lodash', 'jquery', 'TweenMax', 'superscrollorama'], function(_, $, TweenMax) {
-    'use strict';
+define(['jquery', 'jquery.scrollwatch'], function($) {
+  'use strict';
 
-    var $france = $('.france-map.map');
-    var offset = document.documentElement.clientHeight / -2.8;
+  var $france = $('.france-map.map').fadeTo(0, 0);
+  $france.scrollWatch()
+    .on('scrollin', { delay: 100 }, function() {
+      $france.fadeTo(100, 1);
+    })
+    .on('scrollout', function(e) {
+      console.dir(e);
+      if (e.direction === 'up') {
+        $france.fadeTo(100, 0);
+      }
+    });
 
-    return {
-        init: function() {
-            var controller = $.superscrollorama();
-            var fadeTween = TweenMax.from($france, 0.1, { css: { opacity: 0 } });
-            controller.addTween($france, fadeTween, 200, offset);
-        }
-    }
 });

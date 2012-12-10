@@ -8,6 +8,6 @@
     "d3": "~2.10.3",
     "aight": "~1.0.1",
     "accounting": "~0.3.2",
-    "superscrollorama": "git://github.com/johnpolacek/superscrollorama.git"
+    "jquery.scrollorama": "latest"
   }
 }

@@ -99,9 +99,11 @@
       var elHeight = this.$el.outerHeight();
       var elBottom = elTop + elHeight;
 
-      // element bigger than viewport size and off screen
-      if (elHeight > windowHeight && (elTop < scrollBottom || elBottom > scrollTop)) {
-          return 0;
+      // element taller than the viewport and the top is in the viewport
+      if (elHeight > windowHeight && elTop > scrollTop && elTop < scrollBottom) {
+        if (elTop - scrollTop < windowHeight * 0.5) {
+          return 1;
+        }
       }
 
       // element small then viewport fully in view

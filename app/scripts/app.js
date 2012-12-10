@@ -1,9 +1,7 @@
 define([
-    'river-system-length', 'basin-size', 'intro-drop', 'production-percentage-chart'
+    'basin-size', 'production-percentage-chart', 'river-system-length'
 ],
-function(RiverSystemLength, BasinSize) {
+function() {
   'use strict';
 
-  RiverSystemLength.init();
-  BasinSize.init();
 });
