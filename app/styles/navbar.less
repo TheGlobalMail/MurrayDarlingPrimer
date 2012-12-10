@@ -1,3 +1,7 @@
+.navbar-fixed-top .container {
+    width: 95%;
+}
+
 .tgm-strip {
     background-color: #1b1b1b;
 
@@ -11,8 +15,8 @@
     }
 
     .icons {
-        display: none;
-        margin: 6px 0;
+
+        margin: 10px 0;
         float: right;
         border: 1px solid rgba(255, 255, 255, 0.1);
         .border-radius(5px);
@@ -46,4 +50,60 @@
         background: transparent url(/modules/app/img/ico-share.png) 0 49% no-repeat;
     }
 
+}
+
+// Large tablet
+@media only screen and (max-width: 1050px) {
+    // .navbar .navbar-inner {
+    //     .brand {
+    //         font-size: 380%;
+    //         margin-top: 42px;
+    //     }
+
+    //     .nav > li > a {
+    //         width: 200px;
+    //         padding-top: 54px;
+    //     }
+    // }
+}
+
+
+// Smaller tablet
+@media only screen and (max-width: 950px) {
+
+}
+
+// Small tablet
+@media only screen and (max-width: 750px) {
+    .navbar {
+        .tgm-strip {
+            padding: 0 20px;
+            // text-align: center;
+
+            .tgm {
+                width: 195px;
+                margin: 0 auto;
+                height: 32px;
+            }
+        }
+
+
+    }
+}
+
+
+// Phones
+@media only screen and (max-width: 550px) {
+
+    .navbar {
+        .tgm-strip {
+            text-align: center;
+
+            .icons {
+                display: none;
+            }
+        }
+
+
+    }
 }
