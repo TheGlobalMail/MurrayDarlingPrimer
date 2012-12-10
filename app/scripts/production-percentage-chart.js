@@ -44,10 +44,11 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
     var barY = function(d, i) { return i * totalRowHeight + (totalRowHeight); };
     var g = graph.selectAll('g').data(data).enter().append('g');
 
+    // bar background pattern
     graph.append('defs').append('svg:pattern')
       .attr('id', 'barstripesbackground')
       .attr('height', 1)
-      .attr('width', 0.5)
+      .attr('width', 0.1)
       .append('image')
         .attr('xlink:href', '/images/bar-stripes.png')
         .attr('height', 30)
@@ -69,6 +70,7 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
       .attr('height', barHeight)
       .attr('fill', function(d) { return colorMap[d.color]; });
 
+    // animate bars when scrolled into viewport
     $graph.scrollWatch({ delay: 200 })
       .on('scrollin', function(e) {
         if (bars.attr('width') == 0) {
@@ -83,8 +85,10 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
         }
       }).handleScroll();
 
+    // stores widths of labels for 'note' rendering
     var textWidths = [];
 
+    // produce label
     g.append('text')
       .attr('y', function(d, i) { return i * totalRowHeight + 36; })
       .attr('x', imageWidth)
@@ -96,6 +100,7 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
         }
       });
 
+    // product label note
     g.filter(function(d) { return d.note; }).append('text')
       .attr('y', function(d, i) { return _.indexOf(data, d) * totalRowHeight + 36; })
       .attr('x', function(d, i) { return imageWidth + textWidths[i] + 5; })

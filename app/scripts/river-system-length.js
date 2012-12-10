@@ -102,6 +102,7 @@ define(['d3', 'lodash', 'jquery', 'accounting', 'jquery.scrollwatch'], function(
         textWidths[i] = this.getBBox().width;
       });
 
+    // location
     g.append('text')
       .filter(function(d) { return d.location; })
       .attr('y', function(d, i) { return (i+1) * totalBarHeight + 40 })
