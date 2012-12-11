@@ -121,16 +121,19 @@
     }
  }
 
-// Phones
 @media only screen and (max-width: 710px) {
-
+    .navbar-fixed-top {
+        position: relative;
+    }
     .intro-banner {
-        height: 400px;
+        height: 360px;
+        margin-top: 0;
         .drop {
-            top: 90px;
+            top: 85px;
         }
         h1 {
-            top:140px;
+            top:135px;
+            .font-size(50);
             span {
                 display: block;
             }
@@ -143,7 +146,7 @@
             }
         }
         h2 {
-            top:240px;
+            top:225px;
             &:before {
                 width: 36px;
             }
@@ -166,7 +169,7 @@
     .map {
         position: relative;
         left: 0;
-top: 0;
-    }
+        top: 0;
+        }
 }
 }
