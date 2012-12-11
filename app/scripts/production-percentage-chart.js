@@ -105,7 +105,7 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
       .attr('y', function(d, i) { return _.indexOf(data, d) * totalRowHeight + 36; })
       .attr('x', function(d, i) { return imageWidth + textWidths[i] + 5; })
       .attr('class', 'produce-note')
-      .text(yoink('note'));
+      .text(function(d) { return '- ' + d.note.toUpperCase() });
 
   }
 

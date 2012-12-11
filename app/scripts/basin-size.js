@@ -7,7 +7,6 @@ define(['jquery', 'jquery.scrollwatch'], function($) {
       $france.fadeTo(100, 1);
     })
     .on('scrollout', function(e) {
-      console.dir(e);
       if (e.direction === 'up') {
         $france.fadeTo(100, 0);
       }

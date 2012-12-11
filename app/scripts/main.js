@@ -34,7 +34,7 @@ require.config({
   }
 });
 
-require(['/vendor/classList.js', 'app'], function() {
+require(['app'], function() {
   'use strict';
 
 
