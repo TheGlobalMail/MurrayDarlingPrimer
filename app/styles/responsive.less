@@ -4,42 +4,42 @@
     }
 
     .intro-banner {
-        height: 410px;
+        // height: 600px;
 
         .drop {
-            top: 110px;
+            // top: 110px;
         }
 
         h1 {
-            top: 160px;
+            // top: 160px;
             .font-size(55);
 
             &:before {
-                width: 180px;
+                width: 191px;
                 top: -34px;
             }
 
             &:after {
-                width: 180px;
+                width: 191px;
                 top: -34px;
             }
         }
 
         h2 {
-            top: 250px;
+            // top: 214px;
             .font-size(16);
             line-height: 1.8;
 
             &:before {
                 width: 128px;
                 top: 14px;
-                margin-right: 91px;
+                margin-right: 102px;
             }
 
             &:after {
                 width: 128px;
                 top: 14px;
-                margin-left: 91px;
+                margin-left: 102px;
             }
         }
     }
@@ -56,28 +56,52 @@
 
     }
 
-    .row-fluid .offset1 {
+    .row-fluid .span7 {
         margin: 0 auto;
         float: none;
         width: 80%;
     }
 
-    .row-fluid .offset5:first-child {
+    .row-fluid .offset4:first-child {
         margin: 0 auto;
         float: none;
         width: 80%;
     }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 750px) {
 
         .intro-banner {
         h1 {
-            .font-size(50);
+            .font-size(52);
+            span {
+                display: block;
+            }
+            &:before {
+                width: 130px;
+                top: -34px;
+            }
+
+            &:after {
+                width: 130px;
+                top: -34px;
+            }
         }
         h2 {
-            top: 240px;
+            top: 368px;
             line-height: 1.8;
+
+            &:before {
+                width: 68px;
+                top: 14px;
+                margin-right: 102px;
+            }
+
+            &:after {
+                width: 68px;
+                top: 14px;
+                margin-left: 102px;
+            }
         }
         }
 
@@ -90,3 +114,50 @@
         }
     }
  }
+
+// Phones
+@media only screen and (max-width: 550px) {
+
+    .intro-banner {
+        height: 400px;
+        .drop {
+            top: 90px;
+        }
+        h1 {
+            top:140px;
+            &:before {
+                width: 100px;
+            }
+
+            &:after {
+                width: 100px;
+            }
+        }
+        h2 {
+            top:230px;
+            &:before {
+                width: 36px;
+            }
+
+            &:after {
+                width: 36px;
+            }
+        }
+    }
+    #and-its-big > div {
+        height: auto;
+
+    .info {
+        position: relative;
+        top: 0;
+        display: block;
+        width: auto;
+    }
+
+    .map {
+        position: relative;
+        left: 0;
+top: 0;
+    }
+}
+}
