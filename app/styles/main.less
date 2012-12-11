@@ -3,6 +3,10 @@
 
 @cambria: Cambria, George, Times, serif;
 
+html {
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
 #viz {
     @green: #1aab45;
     @blue: #0b6eb8;
@@ -45,7 +49,7 @@ h2.strikeout {
         border-bottom: 1px solid @textColor;
         display: block;
         position: relative;
-        top: 20px;
+        top: 14px;
         z-index: -5;
     }
 }
@@ -64,14 +68,14 @@ h2.strikeout {
     background-size: cover;
     position: relative;
     margin-top: 24px;
-    height: 670px;
+    height: 890px;
 
     .drop {
         position: absolute;
         width: 32px;
         left: 50%;
         margin-left: -16px;
-        top: 220px;
+        top: 310px;
     }
 
     h1 {
@@ -79,21 +83,23 @@ h2.strikeout {
         position: absolute;
         width: 100%;
         text-align: center;
-        .font-size(70);
+        .font-size(88);
         line-height: .8;
-        top: 278px;
+        top: 368px;
         text-transform: uppercase;
+        text-rendering: geometricPrecision;
+        letter-spacing: -.025em;
 
         &:before {
             .banner-line();
-            top: -30px;
+            top: -36px;
             right: 50%;
             margin-right: 40px;
         }
 
         &:after {
             .banner-line();
-            top: -30px;
+            top: -36px;
             left: 50%;
             margin-left: 40px;
         }
@@ -105,11 +111,12 @@ h2.strikeout {
         position: absolute;
         width: 100%;
         text-align: center;
-        top: 350px;
+        top: 460px;
         font-weight: 300;
         .font-size(20);
         line-height: 0;
         font-style: italic;
+        text-rendering: geometricPrecision;
 
         &:before {
             .banner-line(200px);

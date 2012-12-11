@@ -1,53 +1,61 @@
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1300px) {
     .container {
-        width: 100%;
+        width: 90%;
     }
 
     .intro-banner {
-        // height: 600px;
+        height: 600px;
 
         .drop {
-            // top: 110px;
+            top: 200px;
         }
 
         h1 {
-            // top: 160px;
-            .font-size(55);
+            top: 250px;
+            .font-size(70);
 
             &:before {
-                width: 191px;
+                width: 291px;
                 top: -34px;
             }
 
             &:after {
-                width: 191px;
+                width: 291px;
                 top: -34px;
             }
         }
 
         h2 {
-            // top: 214px;
+            top: 310px;
             .font-size(16);
             line-height: 1.8;
 
             &:before {
-                width: 128px;
+                width: 228px;
                 top: 14px;
                 margin-right: 102px;
             }
 
             &:after {
-                width: 128px;
+                width: 228px;
                 top: 14px;
                 margin-left: 102px;
             }
         }
     }
 
+
+
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        width: 100%;
+    }
     #river-container {
         display: none;
     }
-
     .row-fluid  {
         margin: 0 auto;
     }
@@ -59,46 +67,44 @@
     .row-fluid .span7 {
         margin: 0 auto;
         float: none;
-        width: 80%;
+        width: 90%;
     }
 
     .row-fluid .offset4:first-child {
         margin: 0 auto;
         float: none;
-        width: 80%;
+        width: 90%;
     }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 830px) {
 
         .intro-banner {
         h1 {
-            .font-size(52);
-            span {
-                display: block;
-            }
+            .font-size(60);
+
             &:before {
-                width: 130px;
+                width: 180px;
                 top: -34px;
             }
 
             &:after {
-                width: 130px;
+                width: 180px;
                 top: -34px;
             }
         }
         h2 {
-            top: 368px;
+            top: 308px;
             line-height: 1.8;
 
             &:before {
-                width: 68px;
+                width: 118px;
                 top: 14px;
                 margin-right: 102px;
             }
 
             &:after {
-                width: 68px;
+                width: 118px;
                 top: 14px;
                 margin-left: 102px;
             }
@@ -116,7 +122,7 @@
  }
 
 // Phones
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 710px) {
 
     .intro-banner {
         height: 400px;
@@ -125,6 +131,9 @@
         }
         h1 {
             top:140px;
+            span {
+                display: block;
+            }
             &:before {
                 width: 100px;
             }
@@ -134,7 +143,7 @@
             }
         }
         h2 {
-            top:230px;
+            top:240px;
             &:before {
                 width: 36px;
             }
