@@ -1,7 +1,8 @@
 define([
     'basin-size', 'production-percentage-chart', 'river-system-length'
 ],
-function() {
+function($) {
   'use strict';
+
 
 });

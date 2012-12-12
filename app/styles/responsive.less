@@ -44,10 +44,6 @@
             }
         }
     }
-
-
-
-
 }
 
 @media only screen and (max-width: 1000px) {
@@ -62,10 +58,18 @@
     #river-container {
         display: none;
     }
+
     .row-fluid  {
         margin: 0 auto;
     }
-    .row-fluid [class*="span"] {
+
+    .row-fluid .span4 {
+        width: 0;
+
+    }
+
+    .row-fluid .span7 {
+        margin: 0 auto;
         float: none;
         margin: 0 auto;
         width: 90%;
@@ -80,14 +84,13 @@
 
 
     #content-container section#environment .span8 {
-    margin-left: 0;
+      margin-left: 0;
     }
 }
 
 @media only screen and (max-width: 830px) {
 
-        .intro-banner {
-
+    .intro-banner {
         h1 {
             .font-size(60);
 
@@ -101,6 +104,7 @@
                 top: -34px;
             }
         }
+
         h2 {
             top: 324px;
             line-height: 1.8;
@@ -117,28 +121,22 @@
                 margin-left: 102px;
             }
         }
+    }
+
+    #introduction {
+        h1 {
+            .font-size(35);
+            line-height: 1.1;
+            margin: 15px 0;
         }
+    }
 
-        #introduction {
-
-            h1 {
-                .font-size(35);
-                line-height: 1.1;
-                margin: 15px 0;
-            }
-        }
-
-
-
-
-        .row-fluid [class*="span"] {
+    .row-fluid [class*="span"] {
         margin: 0 auto;
         float: none;
         width: 90%;
-
-        }
-
     }
+}
 
 @media only screen and (max-width: 710px) {
     .navbar-fixed-top {
@@ -153,19 +151,21 @@
             }
     }
 
-
     .intro-banner {
         height: 360px;
         margin-top: 0;
         .drop {
             top: 85px;
         }
+
         h1 {
             top:135px;
             .font-size(50);
+
             span {
                 display: block;
             }
+
             &:before {
                 width: 100px;
             }
@@ -174,8 +174,10 @@
                 width: 100px;
             }
         }
+
         h2 {
             top:225px;
+
             &:before {
                 width: 36px;
             }
@@ -185,9 +187,11 @@
             }
         }
     }
+
     h2.strikeout {
-            .font-size(20);
-        }
+        .font-size(20);
+    }
+
     #content-container h1,
     #content-container section#environment h1 {
             .font-size(30);
@@ -196,28 +200,34 @@
             .font-size(16);
     }
 
-
-
     #and-its-big > div {
         height: auto;
 
-    .info {
-        position: relative;
-        top: 0;
-        display: block;
-        width: auto;
+        .info {
+            position: relative;
+            top: 0;
+            display: block;
+            width: auto;
+        }
+
+        .map {
+            position: relative;
+            left: 0;
+            top: 0;
+            margin: 0 auto;
+        }
     }
 
-    .map {
-        position: relative;
-        left: 0;
-        top: 0;
-        margin: 0 auto;
+    #milk {
+        #coffee-chart {
+           margin: 0 auto;
         }
     }
-        #milk {
-        #coffee-chart {
-        margin: 0 auto;
-        }
-        }
+}
+
+
+@media only screen and (max-width: 320px) {
+    #length-graph-container .length {
+        .font-size(18);
+    }
 }

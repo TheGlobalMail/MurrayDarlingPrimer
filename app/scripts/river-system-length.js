@@ -1,28 +1,26 @@
 define(['d3', 'lodash', 'jquery', 'accounting', 'jquery.scrollwatch'], function(d3, _, $, accounting) {
   'use strict';
 
-  var RiverSystemLength = {
+  var data = [
+    { name: 'Murray-Darling River Systems', length: 3672, color: 'blue' },
+    { name: 'Rio-Grande', location: 'USA/Mexico', length: 3057, color: 'green' },
+    { name: 'Danube-Breg', location: 'Europe', length: 2888, color: 'orange' },
+    { name: 'Zambesi', location: 'Africa', length: 2693, color: 'yellow' }
+  ];
 
-    data: [
-      { name: 'Murray-Darling River Systems', length: 3672, color: 'blue' },
-      { name: 'Rio-Grande', location: 'USA/Mexico', length: 3057, color: 'green' },
-      { name: 'Danube-Breg', location: 'Europe', length: 2888, color: 'orange' },
-      { name: 'Zambesi', location: 'Africa', length: 2693, color: 'yellow' }
-    ]
+  var $graph = $('#length-graph-container').empty();
+  var totalBarHeight = 65;
+  var max = _.chain(data).pluck('length').max().value();
 
-  };
+  var yoink = function(prop, fn) {
+    fn = fn || function(d) { return d; };
+    return function(data) { return fn(data[prop]); };
+  }
 
-  var data = RiverSystemLength.data;
-
-  RiverSystemLength.init = function() {
-    var totalBarHeight = 65;
-    var graphWidth = 540;
-    var max = _.chain(data).pluck('length').max().value();
-    var $graph = $('#length-graph-container');
-    var graph = d3.select('#length-graph-container')
-      .append('svg')
-      .attr('width', graphWidth)
-      .attr('height', data.length * totalBarHeight);
+  var init = function(graphWidth) {
+    $graph.empty();
+    graphWidth = graphWidth || 540;
+    console.log('render at', graphWidth);
 
     var x = function(prop) {
       var scale = d3.scale.linear()
@@ -34,17 +32,17 @@ define(['d3', 'lodash', 'jquery', 'accounting', 'jquery.scrollwatch'], function(
       }
     }
 
-    var yoink = function(prop, fn) {
-      fn = fn || function(d) { return d; };
-      return function(data) { return fn(data[prop]); };
-    }
+    var graph = d3.select('#length-graph-container')
+      .append('svg')
+      .attr('width', graphWidth)
+      .attr('height', data.length * totalBarHeight);
 
     var g = graph.selectAll('g').data(data).enter().append('g');
 
     graph.append('defs').append('svg:pattern')
       .attr('id', 'barstripesbackground')
       .attr('height', 1)
-      .attr('width', 0.5)
+      .attr('width', 0.1)
       .append('image')
         .attr('xlink:href', '/images/bar-stripes.png')
         .attr('height', 30)
@@ -111,6 +109,19 @@ define(['d3', 'lodash', 'jquery', 'accounting', 'jquery.scrollwatch'], function(
       .text(yoink('location', function(t) { return '(' + t.toUpperCase() + ')'; }));
   };
 
-  RiverSystemLength.init();
-  return RiverSystemLength;
+  var render = _.debounce(function() {
+    $graph.scrollWatch('destroy');
+    init($graph.width());
+    $graph.scrollWatch().handleScroll();
+  }, 200)
+
+  init($graph.width());
+
+  if (!window.isMobileSafari) {
+    $(window).on('resize', render);
+  }
+
+  $(window).on('orientationchange', render);
+
+  return init;
 });

@@ -5,25 +5,33 @@
   var $window = $(window);
 
   var ScrollWatch = function(el, options) {
-    _.bindAll(this, 'handleScroll');
+    _.bindAll(this, 'handleScroll', 'listen');
 
     this.el = el;
     this.$el = $(el);
 
     this.options = _.defaults(options || {}, {
-      throttle: 100
+      throttle: 100,
+      inThreshold: 0.6,
+      outThreshold: 0
     });
 
     this.inViewport = false;
     this.callbacks = { "scrollin": $.Callbacks(), "scrollout": $.Callbacks() };
-    this.setupEvents();
   };
 
   ScrollWatch.prototype = {
 
-    setupEvents: function() {
-      this._handleScroll = _.throttle(this.handleScroll, this.options.throttle);
-      $window.on('scroll', this._handleScroll)
+    listen: function() {
+      var curTime = +new Date();
+      if (!this.lastRun || (this.lastRun && (curTime - this.lastRun) >= this.options.throttle)) {
+        this.lastRun = +new Date();
+        this.handleScroll();
+      }
+
+      if (!this.cancelListen) {
+        requestAnimationFrame(this.listen);
+      }
     },
 
     on: function(event, options, callback, thisArg) {
@@ -42,7 +50,11 @@
       }
 
       this.callbacks[event].add(callback);
-      $window.scroll();
+
+      if (!this.isListening) {
+        this.isListening = true;
+        this.listen();
+      }
       return this;
     },
 
@@ -64,15 +76,19 @@
       if (!this.lastOffset) {
         this.direction = false;
       } else {
-          this.direction = (currentOffset > this.lastOffset) ? 'down' : 'up';
+        this.direction = (currentOffset > this.lastOffset) ? 'down' : 'up';
       }
 
       this.lastOffset = currentOffset;
 
-      if (!this.inViewport && inViewport > 0.9) {
+      if (!this.inViewport && inViewport > 0.6) {
         this.inViewport = true;
         this.trigger('scrollin');
-      } else if (this.inViewport && !inViewport) {
+        if (this.el[0].id === 'length-graph-container') {
+          console.log(this.callbacks.scrollin);
+          console.log('scrolin');
+        }
+      } else if (this.inViewport && inViewport === 0) {
         this.inViewport = false;
         this.trigger('scrollout');
       }
@@ -82,7 +98,7 @@
 
     trigger: function(event)
     {
-      if (event == this.lastTriggered) {
+      if (event === this.lastTriggered) {
         return false;
       }
 
@@ -125,7 +141,8 @@
     },
 
     off: function() {
-      $window.off('scroll', this._handleScroll);
+      this.cancelListen = true;
+      this.callbacks = { "scrollin": $.Callbacks(), "scrollout": $.Callbacks() };
     }
 
   };
@@ -135,6 +152,12 @@
   $.fn.scrollWatch = function(options) {
     var $this = $(this),
         data = $this.data('scrollWatch');
+
+    if (options === 'destory' && data) {
+      data.off();
+      $this.data('scrollWatch', null);
+      return this;
+    }
 
     if (!data) {
       $this.data('scrollWatch', (data = new ScrollWatch(this, options)));
