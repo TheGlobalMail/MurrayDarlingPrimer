@@ -71,13 +71,20 @@
     .row-fluid .span7 {
         margin: 0 auto;
         float: none;
+        margin: 0 auto;
         width: 90%;
     }
 
-    .row-fluid .offset4:first-child {
+
+    .row-fluid [class*="offset"]:first-child {
         margin: 0 auto;
         float: none;
         width: 90%;
+    }
+
+
+    #content-container section#environment .span8 {
+    margin-left: 0;
     }
 }
 
@@ -116,18 +123,22 @@
         }
     }
 
-    #introduction h1 {
-        .font-size(35);
-        line-height: 1.1;
-        margin: 15px 0;
-    }
+        #introduction {
 
-    .row-fluid [class*="span"] {
+            h1 {
+                .font-size(35);
+                line-height: 1.1;
+                margin: 15px 0;
+            }
+        }
+
+
+        .row-fluid [class*="span"] {
         margin: 0 auto;
         float: none;
         width: 90%;
+        }
     }
- }
 
 @media only screen and (max-width: 710px) {
     .navbar-fixed-top {
@@ -174,18 +185,11 @@
     #and-its-big > div {
         height: auto;
 
-        .info {
-            position: relative;
-            top: 0;
-            display: block;
-            width: auto;
-        }
-
-        .map {
-            position: relative;
-            left: 0;
-            top: 0;
-        }
+    .info {
+        position: relative;
+        top: 0;
+        display: block;
+        width: auto;
     }
 
     .map {
