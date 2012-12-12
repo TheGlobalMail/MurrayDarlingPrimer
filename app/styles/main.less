@@ -167,6 +167,7 @@ h2.strikeout {
         .font-size(48);
         color: @grayDark;
         margin: 25px 0 15px;
+
         span {
             display: block;
             .font-size(16);
@@ -181,8 +182,8 @@ h2.strikeout {
         line-height: 1.4;
         color: @black;
         margin-top: 5%;
-        span {
 
+        span {
             font-weight: normal;
 
         }
@@ -210,54 +211,6 @@ h2.strikeout {
             background-image: url(/images/breakout-bg.png);
             .container {
                 background: url(/images/drip-breakout-bg.svg) center center no-repeat fixed;
-            }
-        }
-
-        &#environment {
-            background: #253039 url(/images/enviro-bg.jpg) no-repeat top center;
-            background-size: 100%;
-            margin-bottom: 0;
-            h1 {
-                .font-size(60);
-            }
-            h2.strikeout {
-                span {
-                    background-color: #253039;
-                }
-                &:before {
-                    border-bottom: 1px solid white;
-                }
-            }
-
-            p {
-                .opacity(70);
-            }
-
-
-            #conclusion {
-                p {
-                    .opacity(100);
-                }
-            }
-
-            a {
-                color: white;
-                font-weight: bold;
-                border-bottom: 1px dotted white;
-                &:hover {
-                    text-decoration: none;
-                    .opacity(60);
-                }
-            }
-            figure.map {
-                padding-left: 20px;
-                border-left: 1px solid rgba(255,255,255,0.2);
-            }
-            .row-fluid:first-of-type p {
-                .opacity(100);
-            }
-            .span4 {
-                margin-left: 0;
             }
         }
 
@@ -451,32 +404,12 @@ h2.strikeout {
 
 #fragile > div {
     position: relative;
+
     h3 {
-            // .font-size(20);
-            // line-height: 1.2;
-        }
-    #evaporation {
-        height: 270px;
-        h3 {
-
-            &.left,
-            &.right {
-                position: absolute;
-                width: 25%;
-                top:220px;
-                left: 5%;
-            }
-            &.right {
-                left: initial;
-                right: 5%;
-            }
-
-        }
-        figcaption {
-            position: absolute;
-            bottom: 0;
-        }
+        .font-size(20);
+        line-height: 1.2;
     }
+
     #variable {
         h3 {
             span {
@@ -486,24 +419,108 @@ h2.strikeout {
     }
 }
 
-#milk {
-    #coffee-chart {
-        position: relative;
-        display: block;
-        width:282px;
-        height: 282px;
-        background: url(/images/coffee.png) no-repeat center center;
-        background-size: 100%;
-        span {
-            display: block;
-            position: absolute;
-            top: 62px;
-            right: 67px;
-            width: 76px;
-            height: 111px;
-            background: url(/images/coffee-percent.png) no-repeat center center;
-            background-size: 100%;
+#evaporation {
+    height: 270px;
+
+    h3 {
+        position: absolute;
+        width: 24%;
+
+        &.left {
+            top: 220px;
+            left: 5%;
         }
+
+        &.right {
+            top: 280px;
+            right: 5%;
+        }
+    }
+
+    .big-drop {
+        position: absolute;
+        top: 220px;
+        left: 50%;
+        margin-left: -85px;
+    }
+
+    .small-drop {
+        position: absolute;
+        top: 370px;
+        left: 50%;
+        margin-left: -6px;
+    }
+
+    figcaption {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+#environment {
+    background: #253039 url(/images/enviro-bg.jpg) no-repeat top center;
+    background-size: 100%;
+    margin-bottom: 0;
+
+    h1 {
+        .font-size(60);
+    }
+
+    h2.strikeout {
+        span {
+            background-color: #253039;
+        }
+
+        &:before {
+            border-bottom: 1px solid white;
+        }
+    }
+
+    p {
+        .opacity(70);
+    }
+
+    a {
+        color: white;
+        font-weight: bold;
+        border-bottom: 1px dotted white;
+
+        &:hover {
+            text-decoration: none;
+            .opacity(60);
+        }
+    }
+
+    figure.map {
+        padding-left: 20px;
+        border-left: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .row-fluid:first-of-type p {
+        .opacity(100);
+    }
+
+    .span4 {
+        margin-left: 0;
+    }
+}
+
+#coffee-chart {
+    display: block;
+    width:282px;
+    height: 282px;
+    background: url(/images/coffee.png) no-repeat center center;
+    background-size: 100%;
+
+    span {
+        display: block;
+        position: absolute;
+        top: 62px;
+        right: 67px;
+        width: 76px;
+        height: 111px;
+        background: url(/images/coffee-percent.png) no-repeat center center;
+        background-size: 100%;
     }
 }
 
@@ -511,16 +528,7 @@ h2.strikeout {
     position: relative;
     max-width: 100%;
     margin: 0 auto;
-    #image {
-        display: block;
-        clear: left;
-        width: 100%;
-        height: auto;
-        padding: 22% 0;
-        background: #bba289 url(/images/laser-level.png) no-repeat top left;
-        background-size: 100%;
-        z-index: 0;
-    }
+
     p {
         float: left;
         .font-size(12);
@@ -532,6 +540,7 @@ h2.strikeout {
             font-weight: bold;
         }
     }
+
     p.field {
         width: auto;
         max-width: 400px;
