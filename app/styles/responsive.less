@@ -43,22 +43,21 @@
             }
         }
     }
-
-
-
-
 }
 
 @media only screen and (max-width: 1000px) {
     .container {
         width: 100%;
     }
+
     #river-container {
         display: none;
     }
+
     .row-fluid  {
         margin: 0 auto;
     }
+
     .row-fluid .span4 {
         width: 0;
 
@@ -79,7 +78,7 @@
 
 @media only screen and (max-width: 830px) {
 
-        .intro-banner {
+    .intro-banner {
         h1 {
             .font-size(60);
 
@@ -93,6 +92,7 @@
                 top: -34px;
             }
         }
+
         h2 {
             top: 308px;
             line-height: 1.8;
@@ -109,15 +109,12 @@
                 margin-left: 102px;
             }
         }
-        }
+    }
 
-        #introduction {
-
-        h1 {
-            .font-size(35);
-            line-height: 1.1;
-            margin: 15px 0;
-        }
+    #introduction h1 {
+        .font-size(35);
+        line-height: 1.1;
+        margin: 15px 0;
     }
  }
 
@@ -126,14 +123,18 @@
 
     .intro-banner {
         height: 400px;
+
         .drop {
             top: 90px;
         }
+
         h1 {
             top:140px;
+
             span {
                 display: block;
             }
+
             &:before {
                 width: 100px;
             }
@@ -142,8 +143,10 @@
                 width: 100px;
             }
         }
+
         h2 {
             top:240px;
+
             &:before {
                 width: 36px;
             }
@@ -153,20 +156,27 @@
             }
         }
     }
+
     #and-its-big > div {
         height: auto;
 
-    .info {
-        position: relative;
-        top: 0;
-        display: block;
-        width: auto;
-    }
+        .info {
+            position: relative;
+            top: 0;
+            display: block;
+            width: auto;
+        }
 
-    .map {
-        position: relative;
-        left: 0;
-top: 0;
+        .map {
+            position: relative;
+            left: 0;
+            top: 0;
+        }
     }
 }
+
+@media only screen and (max-width: 320px) {
+    #length-graph-container .length {
+        .font-size(18);
+    }
 }
