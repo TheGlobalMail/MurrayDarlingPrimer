@@ -27,7 +27,9 @@ p {
     line-height: 1.4;
     padding-right: 5%;
     &.left {
-        width:40%;
+        margin: 5% 0 0 0;
+        width: 50%;
+        float: left;
     }
 }
 
@@ -164,7 +166,7 @@ h2.strikeout {
     h1 {
         .font-size(50);
         color: @grayDark;
-        margin: 30px 0 20px;
+        margin: 25px 0 15px;
         span {
             display: block;
             .font-size(16);
@@ -188,7 +190,7 @@ h2.strikeout {
     .leadin {
         .font-size(18);
         color: @grayDark;
-        margin: 15px 0;
+        margin: 0 0 15px 0;
     }
 
     .italic {
@@ -196,7 +198,12 @@ h2.strikeout {
     }
 
     section {
-        margin-bottom: 10%;
+        margin-bottom: 8%;
+
+        .row-fluid [class*="span"] {
+            min-height:1px;
+        }
+
         &#trading {
             background-color: @blue;
             background-image: url(/images/breakout-bg.png);
@@ -206,7 +213,8 @@ h2.strikeout {
         }
 
         &#environment {
-            background-color: #253039;
+            background: #253039 url(/images/enviro-bg.jpg) no-repeat top center;
+            background-size: 100%;
             margin-bottom: 0;
             h1 {
                 .font-size(60);
@@ -222,6 +230,19 @@ h2.strikeout {
 
             p {
                 .opacity(70);
+            }
+            a {
+                color: white;
+                font-weight: bold;
+                border-bottom: 1px dotted white;
+                &:hover {
+                    text-decoration: none;
+                    .opacity(60);
+                }
+            }
+            figure.map {
+                padding-left: 20px;
+                border-left: 1px solid rgba(255,255,255,0.2);
             }
             .row-fluid:first-of-type p {
                 .opacity(100);
@@ -253,8 +274,9 @@ h2.strikeout {
     }
 
     figure {
-        margin: 0;
+        margin: 0 0 10%;
         figcaption {
+            display: inline;
             .font-size(11);
             .opacity(50);
             margin-top: 10px;
@@ -452,6 +474,51 @@ h2.strikeout {
                 display: block;
             }
         }
+    }
+}
+
+#milk {
+    #coffee-chart {
+        display: block;
+        width:282px;
+        height: 282px;
+        background: url(/images/coffee.png) no-repeat center center;
+        background-size: 100%;
+    }
+}
+
+#laser-levelling-illustration {
+    position: relative;
+    max-width: 564px;
+    margin: 0 auto;
+    #image {
+        display: block;
+        clear: left;
+        width: 100%;
+        height: auto;
+        padding: 20% 0;
+        background: url(/images/laser-level.png) no-repeat bottom left;
+        background-size: 100%;
+        z-index: 0;
+    }
+    p {
+        float: left;
+        .font-size(11);
+        width: 28%;
+
+
+        em {
+            font-weight: bold;
+        }
+    }
+    p.field {
+        width: auto;
+        max-width: 400px;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        z-index: 1;
     }
 }
 

@@ -63,10 +63,6 @@
         margin: 0 auto;
     }
 
-    .row-fluid .span4 {
-        width: 0;
-
-    }
 
     .row-fluid .span7 {
         margin: 0 auto;
@@ -131,7 +127,6 @@
         }
     }
 
-
     .row-fluid [class*="span"] {
         margin: 0 auto;
         float: none;
@@ -142,6 +137,14 @@
 @media only screen and (max-width: 710px) {
     .navbar-fixed-top {
         position: relative;
+    }
+
+    p {
+        padding: 0;
+        &.left {
+            width: inherit;
+            float: none;
+            }
     }
 
     .intro-banner {
@@ -180,6 +183,30 @@
             }
         }
     }
+    #content-container {
+        h1 span {
+            .font-size(12);
+        }
+        .leadin {
+            .font-size(14);
+        }
+    }
+
+    p {
+        .font-size(14);
+    }
+
+    h2.strikeout {
+        .font-size(18);
+    }
+
+    #content-container h1,
+    #content-container section#environment h1 {
+            .font-size(26);
+    }
+    #fragile > div h3 {
+            .font-size(16);
+    }
 
     #and-its-big > div {
         height: auto;
@@ -195,9 +222,30 @@
             position: relative;
             left: 0;
             top: 0;
+            margin: 0 auto;
+        }
+    }
+
+    #milk {
+        #coffee-chart {
+           margin: 0 auto;
+        }
+    }
+    #laser-levelling-illustration {
+        #image {
+                    }
+        p {
+            width:30%;
+            margin-right: 2%;
+        }
+    }
+    section.breakout {
+        .row-fluid [class*="span"] {
+            width: 100%;
         }
     }
 }
+
 
 @media only screen and (max-width: 320px) {
     #length-graph-container .length {
