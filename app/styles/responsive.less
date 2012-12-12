@@ -183,8 +183,13 @@
             }
         }
     }
-    #content-container .leadin {
-        .font-size(16);
+    #content-container {
+        h1 span {
+            .font-size(12);
+        }
+        .leadin {
+            .font-size(14);
+        }
     }
 
     p {
@@ -192,12 +197,12 @@
     }
 
     h2.strikeout {
-        .font-size(20);
+        .font-size(18);
     }
 
     #content-container h1,
     #content-container section#environment h1 {
-            .font-size(30);
+            .font-size(26);
     }
     #fragile > div h3 {
             .font-size(16);
@@ -232,6 +237,11 @@
         p {
             width:30%;
             margin-right: 2%;
+        }
+    }
+    section.breakout {
+        .row-fluid [class*="span"] {
+            width: 100%;
         }
     }
 }
