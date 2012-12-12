@@ -28,7 +28,10 @@
         this.lastRun = +new Date();
         this.handleScroll();
       }
-      requestAnimationFrame(this.listen);
+
+      if (!this.cancelListen) {
+        requestAnimationFrame(this.listen);
+      }
     },
 
     on: function(event, options, callback, thisArg) {
@@ -138,7 +141,7 @@
     },
 
     off: function() {
-      clearTimeout(this._interval);
+      this.cancelListen = true;
       this.callbacks = { "scrollin": $.Callbacks(), "scrollout": $.Callbacks() };
     }
 
