@@ -67,7 +67,7 @@ window.isMobileSafari = !!navigator.userAgent.match(/iPhone|iPad/i);
         };
 }());
 
-require(['app'], function() {
+require(['basin-size', 'production-percentage-chart', 'river-system-length'], function() {
   'use strict';
 
   function hideAddressBar() {

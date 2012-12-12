@@ -112,7 +112,6 @@ define(['d3', 'lodash', 'jquery', 'accounting', 'jquery.scrollwatch'], function(
   var render = _.debounce(function() {
     $graph.scrollWatch('destroy');
     init($graph.width());
-    $graph.scrollWatch().handleScroll();
   }, 200)
 
   init($graph.width());
