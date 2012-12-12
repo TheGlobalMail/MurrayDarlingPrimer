@@ -167,6 +167,7 @@ h2.strikeout {
         .font-size(50);
         color: @grayDark;
         margin: 25px 0 15px;
+
         span {
             display: block;
             .font-size(16);
@@ -180,8 +181,8 @@ h2.strikeout {
         .font-size(16);
         color: @black;
         margin-top: 5%;
+
         span {
-            display: block;
             font-weight: normal;
             line-height: 1.4;
         }
@@ -402,32 +403,10 @@ h2.strikeout {
 
 #fragile > div {
     position: relative;
+
     h3 {
         .font-size(20);
         line-height: 1.2;
-    }
-
-    #evaporation {
-        height: 270px;
-        h3 {
-
-            &.left,
-            &.right {
-                position: absolute;
-                width: 25%;
-                top:220px;
-                left: 5%;
-            }
-            &.right {
-                left: initial;
-                right: 5%;
-            }
-
-        }
-        figcaption {
-            position: absolute;
-            bottom: 0;
-        }
     }
 
     #variable {
@@ -436,6 +415,44 @@ h2.strikeout {
                 display: block;
             }
         }
+    }
+}
+
+#evaporation {
+    height: 270px;
+
+    h3 {
+        position: absolute;
+        width: 24%;
+
+        &.left {
+            top: 220px;
+            left: 5%;
+        }
+
+        &.right {
+            top: 280px;
+            right: 5%;
+        }
+    }
+
+    .big-drop {
+        position: absolute;
+        top: 220px;
+        left: 50%;
+        margin-left: -85px;
+    }
+
+    .small-drop {
+        position: absolute;
+        top: 370px;
+        left: 50%;
+        margin-left: -6px;
+    }
+
+    figcaption {
+        position: absolute;
+        bottom: 0;
     }
 }
 
