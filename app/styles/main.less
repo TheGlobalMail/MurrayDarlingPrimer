@@ -146,16 +146,20 @@ h2.strikeout {
 }
 
 #main {
-    position: relative;
     line-height: 1.4;
 }
 
 #river-container {
-    position: absolute;
-    top: 0px;
-    margin-left: -20px;
-    z-index: -10;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 0px;
+      margin-left: -20px;
+      z-index: -10;
+    }
 }
+
 #content-container {
     h1 {
         .font-size(50);
