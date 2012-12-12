@@ -212,46 +212,6 @@ h2.strikeout {
             }
         }
 
-        &#environment {
-            background: #253039 url(/images/enviro-bg.jpg) no-repeat top center;
-            background-size: 100%;
-            margin-bottom: 0;
-            h1 {
-                .font-size(60);
-            }
-            h2.strikeout {
-                span {
-                    background-color: #253039;
-                }
-                &:before {
-                    border-bottom: 1px solid white;
-                }
-            }
-
-            p {
-                .opacity(70);
-            }
-            a {
-                color: white;
-                font-weight: bold;
-                border-bottom: 1px dotted white;
-                &:hover {
-                    text-decoration: none;
-                    .opacity(60);
-                }
-            }
-            figure.map {
-                padding-left: 20px;
-                border-left: 1px solid rgba(255,255,255,0.2);
-            }
-            .row-fluid:first-of-type p {
-                .opacity(100);
-            }
-            .span4 {
-                margin-left: 0;
-            }
-        }
-
         &.breakout {
             .box-shadow(inset 0 5px 5px rgba(0,0,0,0.2));
 
@@ -443,9 +403,10 @@ h2.strikeout {
 #fragile > div {
     position: relative;
     h3 {
-            .font-size(20);
-            line-height: 1.2;
-        }
+        .font-size(20);
+        line-height: 1.2;
+    }
+
     #evaporation {
         height: 270px;
         h3 {
@@ -468,6 +429,7 @@ h2.strikeout {
             bottom: 0;
         }
     }
+
     #variable {
         h3 {
             span {
@@ -477,30 +439,67 @@ h2.strikeout {
     }
 }
 
-#milk {
-    #coffee-chart {
-        display: block;
-        width:282px;
-        height: 282px;
-        background: url(/images/coffee.png) no-repeat center center;
-        background-size: 100%;
+#environment {
+    background: #253039 url(/images/enviro-bg.jpg) no-repeat top center;
+    background-size: 100%;
+    margin-bottom: 0;
+
+    h1 {
+        .font-size(60);
     }
+
+    h2.strikeout {
+        span {
+            background-color: #253039;
+        }
+
+        &:before {
+            border-bottom: 1px solid white;
+        }
+    }
+
+    p {
+        .opacity(70);
+    }
+
+    a {
+        color: white;
+        font-weight: bold;
+        border-bottom: 1px dotted white;
+
+        &:hover {
+            text-decoration: none;
+            .opacity(60);
+        }
+    }
+
+    figure.map {
+        padding-left: 20px;
+        border-left: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .row-fluid:first-of-type p {
+        .opacity(100);
+    }
+
+    .span4 {
+        margin-left: 0;
+    }
+}
+
+#coffee-chart {
+    display: block;
+    width:282px;
+    height: 282px;
+    background: url(/images/coffee.png) no-repeat center center;
+    background-size: 100%;
 }
 
 #laser-levelling-illustration {
     position: relative;
     max-width: 564px;
     margin: 0 auto;
-    #image {
-        display: block;
-        clear: left;
-        width: 100%;
-        height: auto;
-        padding: 20% 0;
-        background: url(/images/laser-level.png) no-repeat bottom left;
-        background-size: 100%;
-        z-index: 0;
-    }
+
     p {
         float: left;
         .font-size(11);
@@ -511,6 +510,7 @@ h2.strikeout {
             font-weight: bold;
         }
     }
+
     p.field {
         width: auto;
         max-width: 400px;
