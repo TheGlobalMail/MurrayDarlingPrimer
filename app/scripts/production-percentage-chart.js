@@ -5,7 +5,7 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
     'tan':    '#ece0c1',
     'orange': '#fd8939',
     'green':  '#1aab45',
-    'brown':  '#1aab45',
+    'brown':  '#d16326',
     'grey':   '#d4e2e1',
     'red':    '#f44858',
     'pink':   '#e9695b'
@@ -16,7 +16,7 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
     { name: 'Oranges', percentage: 95, color: 'orange' },
     { name: 'Grapes', percentage: 94, color: 'green', note: 'Drying, Table and Other' },
     { name: 'Almonds', percentage: 93, color: 'brown' },
-    { name: 'Cotton Lint', percentage: 92, color: 'grey' },
+    { name: 'Cotton Lint', percentage: 92, color: 'grey', image: 'cotton' },
     { name: 'Grapes', percentage: 74, color: 'green', note: 'Winemaking', image: 'wine' },
     { name: 'Tomatoes', percentage: 68, color: 'red' },
     { name: 'Pigs', percentage: 62, color: 'pink' },
@@ -24,25 +24,37 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
     { name: 'Wheat', percentage: 48, color: 'tan' }
   ];
 
+  var $graph = $('#production-percentage-chart');
 
-  function init() {
+  function init(graphWidth) {
+    $graph.empty();
     var totalRowHeight = 40;
     var barHeight = 14;
-    var graphWidth = 540;
+    graphWidth = graphWidth || 540;
     var imageWidth = 44;
-    var $graph = $('#production-percentage-chart');
+    var graphHeight = totalRowHeight * data.length + 40;
+    $graph.css('height', graphHeight);
     var graph = d3.select('#production-percentage-chart')
       .append('svg')
       .attr('width', graphWidth)
-      .attr('height', totalRowHeight * data.length + 40);
+      .attr('height', graphHeight);
 
     var yoink = function(prop, fn) {
       fn = fn || _.identity;
       return function(data) { return fn(data[prop]); };
     };
 
-    var barY = function(d, i) { return i * totalRowHeight + (totalRowHeight); };
+    var barY = function(d, i) { return i * totalRowHeight + 18; };
     var g = graph.selectAll('g').data(data).enter().append('g');
+
+    g.append('image')
+      .attr('xlink:href', function(d) {
+        return '/images/graph-icons/' + (d.image || d.name.toLowerCase()) + '.svg';
+      })
+      .attr('x', 3)
+      .attr('y', function(d, i) { return i * totalRowHeight + 4; })
+      .attr('width', imageWidth - 7)
+      .attr('height', totalRowHeight - 8);
 
     // bar background pattern
     graph.append('defs').append('svg:pattern')
@@ -81,7 +93,7 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
       })
       .on('scrollout', function(e) {
         if (e.direction === 'up') {
-          bars.attr('width', 0);
+          bars.attr('width', 0)
         }
       }).handleScroll();
 
@@ -90,7 +102,7 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
 
     // produce label
     g.append('text')
-      .attr('y', function(d, i) { return i * totalRowHeight + 36; })
+      .attr('y', function(d, i) { return i * totalRowHeight + 14; })
       .attr('x', imageWidth)
       .attr('class', 'produce-name')
       .text(yoink('name', function(t) { return t.toUpperCase(); }))
@@ -102,12 +114,24 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
 
     // product label note
     g.filter(function(d) { return d.note; }).append('text')
-      .attr('y', function(d, i) { return _.indexOf(data, d) * totalRowHeight + 36; })
+      .attr('y', function(d, i) { return _.indexOf(data, d) * totalRowHeight + 14; })
       .attr('x', function(d, i) { return imageWidth + textWidths[i] + 5; })
       .attr('class', 'produce-note')
       .text(function(d) { return '- ' + d.note.toUpperCase() });
 
   }
 
-  init();
+  var render = _.debounce(function() {
+    $graph.scrollWatch('destroy');
+    init($graph.width());
+    $graph.scrollWatch().handleScroll();
+  }, 200)
+
+  init($graph.width());
+
+  if (!window.isMobileSafari) {
+    $(window).on('resize', render);
+  }
+
+  $(window).on('orientationchange', render);
 });
