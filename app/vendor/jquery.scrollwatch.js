@@ -84,10 +84,6 @@
       if (!this.inViewport && inViewport > 0.6) {
         this.inViewport = true;
         this.trigger('scrollin');
-        if (this.el[0].id === 'length-graph-container') {
-          console.log(this.callbacks.scrollin);
-          console.log('scrolin');
-        }
       } else if (this.inViewport && inViewport === 0) {
         this.inViewport = false;
         this.trigger('scrollout');
