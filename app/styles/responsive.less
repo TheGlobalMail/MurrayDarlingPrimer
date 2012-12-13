@@ -64,15 +64,16 @@
     }
 
 
-    .row-fluid .span7 {
-        margin: 0 auto;
-        float: none;
-        margin: 0 auto;
-        width: 90%;
-    }
+
 
 
     .row-fluid [class*="offset"]:first-child {
+        margin: 0 auto;
+        float: none;
+        width: 90%;
+    }
+
+    .row-fluid [class*="span"] {
         margin: 0 auto;
         float: none;
         width: 90%;
@@ -125,12 +126,6 @@
             line-height: 1.1;
             margin: 15px 0;
         }
-    }
-
-    .row-fluid [class*="span"] {
-        margin: 0 auto;
-        float: none;
-        width: 90%;
     }
 }
 
@@ -209,19 +204,17 @@
     }
 
     #evaporation {
-    height: 270px;
+
 
         h3 {
 
             &.left {
                 .font-size(14);
-                bottom:200px;
                 left: 0;
             }
 
             &.right {
                 .font-size(14);
-                bottom:200px;
                 right: 0;
             }
         }
