@@ -80,9 +80,16 @@
     #content-container section {
         position: relative;
         #percentage {
+            margin-top: 0;
             .opacity(60);
             position: absolute;
             right: 5%;
+            img {
+                display: block;
+                position: absolute;
+                left: -48px;
+                top: 15px;
+            }
             h2 {
                 right: 0;
                 span {
@@ -201,7 +208,12 @@
             .font-size(14);
         }
         section #percentage {
-            top: 22px;
+            top: 15px;
+            img {
+                width: 22px;
+                top: 11px;
+                left: -26px;
+            }
             h2 {
                 .font-size(40);
                 span {
