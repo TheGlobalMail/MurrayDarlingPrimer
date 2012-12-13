@@ -157,7 +157,7 @@ h2.strikeout {
     img {
       position: absolute;
       top: 0px;
-      margin-left: -20px;
+      margin-left: -25px;
       z-index: -10;
     }
 }
@@ -272,7 +272,7 @@ h2.strikeout {
 
 #introduction {
     position: relative;
-    padding-top: 30px;
+    padding-top: 3%;
 
     #basin-location {
         position: absolute;
@@ -517,57 +517,6 @@ h2.strikeout {
     }
 }
 
-#content-container section#environment {
-    background: #253039 url(/images/enviro-bg.jpg) no-repeat top center;
-    background-size: 100%;
-    margin-bottom: 0;
-
-    h1 {
-        .font-size(60);
-    }
-
-    h2.strikeout {
-        span {
-            background-color: #253039;
-        }
-
-        &:before {
-            border-bottom: 1px solid white;
-        }
-    }
-
-    p {
-        .opacity(70);
-    }
-
-    #conclusion p {
-        .opacity(100);
-    }
-
-    a {
-        color: white;
-        font-weight: bold;
-        border-bottom: 1px dotted white;
-
-        &:hover {
-            text-decoration: none;
-            .opacity(60);
-        }
-    }
-
-    figure.map {
-        padding-left: 20px;
-        border-left: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .row-fluid:first-of-type p {
-        .opacity(100);
-    }
-
-    .span4 {
-        margin-left: 0;
-    }
-}
 
 #coffee-chart {
     display: block;
@@ -626,6 +575,59 @@ h2.strikeout {
         top: 85%;
         left: 10px;
         z-index: 1;
+    }
+}
+
+
+#content-container section#environment {
+    background: #253039 url(/images/enviro-bg.jpg) no-repeat top center;
+    background-size: 100%;
+    margin-bottom: 0;
+
+    h1 {
+        .font-size(60);
+    }
+
+    h2.strikeout {
+        span {
+            background-color: #253039;
+        }
+
+        &:before {
+            border-bottom: 1px solid white;
+        }
+    }
+
+    p {
+        .opacity(70);
+    }
+
+    #conclusion p {
+        .opacity(100);
+    }
+
+    a {
+        color: white;
+        font-weight: bold;
+        border-bottom: 1px dotted white;
+
+        &:hover {
+            text-decoration: none;
+            .opacity(60);
+        }
+    }
+
+    figure.map {
+        padding-left: 20px;
+        border-left: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .row-fluid:first-of-type p {
+        .opacity(100);
+    }
+
+    .span4 {
+        margin-left: 0;
     }
 }
 
