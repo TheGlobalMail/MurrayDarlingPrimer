@@ -74,7 +74,7 @@ h2.strikeout {
 }
 
 .intro-banner {
-    background: url(/images/intro-pic.jpg) no-repeat center center;
+    background: #1b1b1b url(/images/intro-pic.jpg) no-repeat center center;
     background-size: cover;
     position: relative;
     margin-top: 24px;
@@ -396,55 +396,63 @@ h2.strikeout {
 
 #fragile > div {
     position: relative;
-
-    h3 {
-        .font-size(20);
-        line-height: 1.2;
-    }
 }
 
 #evaporation {
-    height: 270px;
 
+    position: relative;
+    figure {
+        height: 260px;
+        figcaption {
+        position: absolute;
+    }
+    }
     h3 {
         position: absolute;
-        width: 24%;
+        width: 26%;
 
         &.left {
-            top: 220px;
-            left: 5%;
+            bottom:78px;
+            left: 8%;
         }
 
         &.right {
-            top: 280px;
-            right: 5%;
+            bottom:78px;
+            right: 8%;
         }
     }
 
     .big-drop {
         position: absolute;
-        top: 220px;
+        width: 171px;
+        bottom: 0;
         left: 50%;
         margin-left: -85px;
+        .opacity(10);
     }
 
     .small-drop {
         position: absolute;
-        top: 370px;
+        width: 11px;
+        bottom: 90px;
         left: 50%;
         margin-left: -6px;
     }
 
     .arrow {
         position: absolute;
-        top: 373px;
+        bottom:90px;
         left: 50%;
         margin-left: 11px;
     }
 
-    figcaption {
-        position: absolute;
-        bottom: 0;
+
+}
+
+#variable {
+    h3 {
+        width: 75%;
+        margin: 0 auto;
     }
 }
 
