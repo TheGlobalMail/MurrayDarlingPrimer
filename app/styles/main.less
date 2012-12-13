@@ -203,15 +203,7 @@ h2.strikeout {
         margin-bottom: 8%;
 
         .row-fluid [class*="span"] {
-            min-height:1px;
-        }
-
-        &#trading {
-            background-color: @blue;
-            background-image: url(/images/breakout-bg.png);
-            .container {
-                background: url(/images/drip-breakout-bg.svg) center center no-repeat fixed;
-            }
+            min-height: 1px;
         }
 
         &.breakout {
@@ -299,7 +291,6 @@ h2.strikeout {
     }
 }
 
-
 #and-its-big > div {
     position: relative;
     height: 420px;
@@ -382,10 +373,11 @@ h2.strikeout {
             left: 137px;
         }
     }
+
     figcaption {
-            position: absolute;
-            bottom: 0;
-        }
+        position: absolute;
+        bottom: 0;
+    }
 }
 
 #production-percentage-chart {
@@ -408,14 +400,6 @@ h2.strikeout {
     h3 {
         .font-size(20);
         line-height: 1.2;
-    }
-
-    #variable {
-        h3 {
-            span {
-                // display: block;
-            }
-        }
     }
 }
 
@@ -451,13 +435,20 @@ h2.strikeout {
         margin-left: -6px;
     }
 
+    .arrow {
+        position: absolute;
+        top: 373px;
+        left: 50%;
+        margin-left: 11px;
+    }
+
     figcaption {
         position: absolute;
         bottom: 0;
     }
 }
 
-#content-container section#environment {
+#environment {
     background: #253039 url(/images/enviro-bg.jpg) no-repeat top center;
     background-size: 100%;
     margin-bottom: 0;
@@ -479,9 +470,10 @@ h2.strikeout {
     p {
         .opacity(70);
     }
+
     #conclusion p {
-            .opacity(100);
-        }
+        .opacity(100);
+    }
 
     a {
         color: white;
@@ -511,13 +503,12 @@ h2.strikeout {
 #coffee-chart {
     display: block;
     position: relative;
-    width:282px;
+    width: 282px;
     height: 282px;
     background: url(/images/coffee.png) no-repeat center center;
     background-size: 100%;
 
-    span {
-        display: block;
+    div {
         position: absolute;
         top: 62px;
         right: 67px;
@@ -525,6 +516,15 @@ h2.strikeout {
         height: 111px;
         background: url(/images/coffee-percent.png) no-repeat center center;
         background-size: 100%;
+    }
+}
+
+#trading {
+    background-color: @blue;
+    background-image: url(/images/breakout-bg.png);
+
+    .container {
+        background: url(/images/drip-breakout-bg.svg) center center no-repeat fixed;
     }
 }
 
@@ -538,7 +538,6 @@ h2.strikeout {
         .font-size(12);
         width: 28%;
         line-height: 1.1;
-
 
         em {
             font-weight: bold;
