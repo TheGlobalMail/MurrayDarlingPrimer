@@ -79,6 +79,12 @@
 
     #content-container section {
         position: relative;
+        .box-shadow(0 5px 10px rgba(0,0,0,0.15));
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        &#livestock, &#rest {
+            .box-shadow(none);
+            border-bottom: none;
+        }
         #percentage {
             margin-top: 0;
             .opacity(60);
