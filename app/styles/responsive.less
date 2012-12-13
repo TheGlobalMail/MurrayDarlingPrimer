@@ -64,9 +64,6 @@
     }
 
 
-
-
-
     .row-fluid [class*="offset"]:first-child {
         margin: 0 auto;
         float: none;
@@ -80,8 +77,19 @@
     }
 
 
-    #content-container section#environment .span8 {
-      margin-left: 0;
+    #content-container section {
+        position: relative;
+        #percentage {
+            position: absolute;
+            right: 5%;
+            h2 {
+                right: 0;
+            }
+        }
+
+        #environment .span8 {
+          margin-left: 0;
+        }
     }
 }
 
@@ -185,6 +193,15 @@
         .leadin {
             .font-size(14);
         }
+        section #percentage {
+            top: 22px;
+            h2 {
+                .font-size(40);
+                span {
+                    .font-size(12);
+                }
+            }
+        }
     }
 
     p {
@@ -198,7 +215,15 @@
     #content-container h1,
     #content-container section#environment h1 {
             .font-size(26);
+            width: 55%;
     }
+
+    #content-container #introduction h1,
+    #content-container section.breakout h1,
+    #content-container section#environment h1 {
+        width: 100%;
+    }
+
     #fragile > div h3 {
             .font-size(16);
     }

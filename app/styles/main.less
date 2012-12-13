@@ -74,7 +74,7 @@ h2.strikeout {
 }
 
 .intro-banner {
-    background: #1b1b1b url(/images/intro-pic.jpg) no-repeat center center;
+    background: #253039 url(/images/intro-pic.jpg) no-repeat center center;
     background-size: cover;
     position: relative;
     margin-top: 24px;
@@ -204,6 +204,28 @@ h2.strikeout {
 
         .row-fluid [class*="span"] {
             min-height: 1px;
+        }
+
+        #percentage {
+            margin-top: -10px;
+            color: #c2c9cd;
+            h2 {
+                font-weight: 900;
+                .font-size(84);
+                font-style: italic;
+                letter-spacing: -0.03em;
+                line-height: .9;
+                sup {
+                    top: -0.3em;
+                }
+                span {
+                    display: block;
+                    .font-size(16);
+                    letter-spacing: 0;
+
+                }
+            }
+
         }
 
         &.breakout {
@@ -443,9 +465,10 @@ h2.strikeout {
 
     .arrow {
         position: absolute;
-        bottom:110px;
+        width: 90px;
+        bottom:108px;
         left: 50%;
-        margin-left: 11px;
+        margin-left: 7px;
     }
 
 
@@ -465,7 +488,7 @@ h2.strikeout {
         position: absolute;
         display: block;
         width: 160px;
-        margin-top: 29%;
+        margin-top: 77px;
         left: 50%;
         margin-left: -50px;
         .font-size(18);
@@ -483,11 +506,11 @@ h2.strikeout {
         position: absolute;
         width: 315px;
         left: 50%;
-        margin-left: -158px;
+        margin-left: -150px;
     }
 }
 
-#environment {
+#content-container section#environment {
     background: #253039 url(/images/enviro-bg.jpg) no-repeat top center;
     background-size: 100%;
     margin-bottom: 0;
@@ -577,6 +600,7 @@ h2.strikeout {
         .font-size(12);
         width: 28%;
         line-height: 1.1;
+        margin-bottom: 1px;
 
         em {
             font-weight: bold;
