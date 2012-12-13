@@ -1,3 +1,11 @@
+// Hi Cobby - please to fix properly!
+figure {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+
 @import "../components/tgm-bootstrap/less/tgm-bootstrap.less";
 @import "navbar.less";
 
@@ -31,6 +39,10 @@ p {
         width: 50%;
         float: left;
     }
+}
+
+figure[class*="span"] {
+    margin-right: 0;
 }
 
 .center {
@@ -199,9 +211,13 @@ h2.strikeout {
         font-style: italic;
     }
 
+    img.chart {
+        margin-top: 5px;
+    }
+
     section {
-        margin-bottom: 5%;
-        padding-bottom: 5%;
+        margin-bottom: 3%;
+        padding-bottom: 3%;
 
         .row-fluid [class*="span"] {
             min-height: 1px;
@@ -250,6 +266,9 @@ h2.strikeout {
                 font-size: inherit;
                 font-family: inherit;
             }
+            h3 {
+                margin-top: 0;
+            }
             p.leadin:first-child {
                 font-weight: bold;
             }
@@ -257,7 +276,8 @@ h2.strikeout {
     }
 
     figure {
-        margin: 0 0 5%;
+        margin-bottom:5%;
+
         figcaption {
             // display: inline;
             width: 100%;
