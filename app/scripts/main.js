@@ -36,6 +36,10 @@ require.config({
 
 window.isMobileSafari = !!navigator.userAgent.match(/iPhone|iPad/i);
 
+if (window.isMobileSafari) {
+  $('html').addClass('mobile-safari');
+}
+
 // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
 // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
 
@@ -67,7 +71,7 @@ window.isMobileSafari = !!navigator.userAgent.match(/iPhone|iPad/i);
         };
 }());
 
-require(['basin-size', 'production-percentage-chart', 'river-system-length'], function() {
+require(['basin-size', 'production-percentage-chart', 'river-system-length', 'water-trading'], function() {
   'use strict';
 
   function hideAddressBar() {
