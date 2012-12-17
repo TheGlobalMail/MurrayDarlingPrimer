@@ -280,6 +280,9 @@ h2.strikeout {
             p.leadin:first-child {
                 font-weight: bold;
             }
+            figcaption a {
+                color: white;
+            }
         }
     }
 
@@ -293,6 +296,9 @@ h2.strikeout {
             .opacity(50);
             margin-top: 10px;
             bottom: 0;
+            &:hover {
+                .opacity(100);
+            }
         }
     }
 }
@@ -357,9 +363,10 @@ h2.strikeout {
         position: absolute;
         top: 80px;
         left: 0;
-        width: 190px;
+        width: 255px;
         span {
         display: inline;
+        font-weight: bold;
         }
     }
 
@@ -395,7 +402,7 @@ h2.strikeout {
     }
 
     @mapOffsetTop: 0px;
-    @mapOffsetLeft: 100px;
+    @mapOffsetLeft: 235px;
 
     .murray-map {
         top: 100px + @mapOffsetTop;
@@ -582,7 +589,9 @@ h2.strikeout {
     background-image: url(/images/breakout-bg.png);
 
     h3 {
-        .font-size(20);
+        span {
+            display: inline;
+        }
     }
 
     .container {
