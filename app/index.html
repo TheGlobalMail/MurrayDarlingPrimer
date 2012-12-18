@@ -3,503 +3,531 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Where The Water Goes</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,800,700" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="//use.typekit.net/pyz3jsr.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Where The Water Goes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,800,700" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="//use.typekit.net/pyz3jsr.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-        <link rel="stylesheet" href="styles/main.css">
-        <!--[if lte IE 8]>
-        <link rel="stylesheet" href="styles/old-ie.css" media="all">
-        <![endif]-->
-        <script src="vendor/modernizr.min.js"></script>
-    </head>
-    <body>
+    <link rel="stylesheet" href="styles/main.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="styles/old-ie.css" media="all">
+    <![endif]-->
+    <script src="vendor/modernizr.min.js"></script>
+  </head>
+  <body>
 
-    <header>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="tgm-strip">
-                <div class="container">
-                    <a href="http:///www.theglobalmail.org" class="tgm">The Global Mail - Back to homepage</a>
-                    <div class="icons">
-                        <a class="about" href="#" data-target="#about-tool-modal" data-toggle="modal">About</a>
-                        <a class="share popover-link carousel-sticky-popover-link" href="javascript:void(0)"><span class="text">share</span></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <div class="row-fluid scrollblock">
-            <div class="intro-banner">
-                <img src="/images/drip.png" alt="Water Prop" class="drop">
-                <h1>Where The <span>Water Goes</span></h1>
-                <h2>A Murray-Darling Primer</h2>
-            </div>
+  <header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="tgm-strip">
+        <div class="container">
+          <a href="http:///www.theglobalmail.org" class="tgm">The Global Mail - Back to homepage</a>
+          <div class="icons">
+            <a class="about" href="#" data-target="#about-tool-modal" data-toggle="modal">About</a>
+            <a class="share popover-link carousel-sticky-popover-link" href="javascript:void(0)"><span class="text">share</span></a>
+          </div>
         </div>
-    </header>
-
-    <div id="main" role="main">
-        <div id="river-container" class="container">
-            <img src="/images/river.jpg" alt="River">
-        </div>
-
-        <div id="content-container">
-            <section id="introduction" class="scrollblock container">
-                <div class="fade-wrapper">
-                    <div class="row-fluid">
-                        <div class="span4">
-                            <div id="basin-location">
-                               <!--  <iframe width="290" height="290" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com.au/maps?q=https:%2F%2Fmaps.google.com.au%2Fmaps%2Fms%3Fauthuser%3D0%26vps%3D2%26ie%3DUTF8%26msa%3D0%26output%3Dkml%26msid%3D207203093288942235772.0004cf96683ae769ae541&amp;hl=en&amp;sll=-32.297289,145.931382&amp;sspn=17.453389,23.444824&amp;t=p&amp;ie=UTF8&amp;ll=-32.175612,145.634766&amp;spn=21.496363,25.400391&amp;z=4&amp;output=embed"></iframe> -->
-                            </div>
-                        </div>
-
-                        <div class="span8">
-                            <h1>Why Care About The Murray-Darling Basin?</h1>
-                            <p class="leadin">
-                                It's Australia&rsquo;s food bowl. Provides 40% of Australia&rsquo;s agricultural production. Two million people live in the Basin, accounting for _____ of Australia&rsquo;s GDP.
-                                </p><p class="leadin">
-                                The basin also carries great significance for many Aboriginal nations. Today, there are over 10,000 Aboriginal sites in the basin area, including sacred sites and burial grounds.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div id="its-long" class="row-fluid">
-                        <div class="offset4 span8">
-                            <h2 class="strikeout"><span>It's Long</span></h2>
-
-                            <p>The world&rsquo;s 15th longest river system, it culminates to be a thousand kilometres longer than the Zambesi in Africa. The waterways flow from highlands, like Kosciuszko National Park and the Great Dividing Range in Southern Queensland, but all of Basin&rsquo;s tributaries end up in the one location: at the mouth of the Murray river in South Australia.</p>
-
-                            <figure>
-                                <div id="length-graph-container" class="graph"></div>
-                                <figcaption><span class="italic">Source:</span> Australian Bureau of Statistics</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-
-                    <div id="and-its-big" class="row-fluid">
-                        <div class="offset4 span8">
-                            <h2 class="strikeout"><span>And It's Big</span></h2>
-
-                            <h3 class="info"><span class="italic">The Murray-Darling Basin covers an area nearly</span> two times the size of France. <sup><a href="#">2</a></sup></h3>
-
-                            <div class="murray-map map">
-                                Murray-Darling Basin Area <strong>1,061,469</strong><em>km<sup>2</sup></em>
-                            </div>
-
-                            <div class="france-map map">
-                                France <strong>674,800</strong><em>km<sup>2</sup></em>
-                            </div>
-
-                            <figure>
-                                <div id="length-graph-container" class="graph"></div>
-                                <figcaption>
-                                    <span class="italic">Source:</span> Australian Bureau of Statistics
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-
-                    <div id="we-depend-on-it" class="row-fluid">
-                        <div class="offset4 span8">
-                            <h2 class="strikeout"><span>We Depend On It</span></h2>
-
-                            <!-- <p>Provides 40% of Australia's agricultural production. 2 million people live in the Basin, account for _____ of Australia's GDP. <sup><a href="#">3</a></sup></p> -->
-
-                            <figure>
-                                <h3>Percentage of Australia's production <span class="italic">in the Murray-Darling Basin</span></h3>
-                                <div id="production-percentage-chart"></div>
-                                <figcaption>
-                                    <span class="italic">Source:</span> Australian Bureau of Statistics
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-
-                    <div id="fragile" class="row-fluid">
-                        <div class="offset4 span8">
-                            <h2 class="strikeout"><span>But it is fragile</span></h2>
-
-                            <p>It is an extremely vulnerable river system, as most of the rainfall it gets each year is lost to evaporation. The Murray Darling Basin covers the same area as the Indus Basin which spans parts of India and Pakistan. While the Indus Basin loses 10% of rainfall to evaporation, the Murray-Darling loses a whopping 94%. <sup><a href="#">3</a></sup></p>
-
-                            <div id="evaporation">
-                                <figure>
-                                    <h3 class="left"><span class="italic">Of the average 530,618 GL of rainfall,</span> 94% is lost through evaporation</h3>
-                                    <h3 class="right"><span class="italic">This leaves just </span>6% for the river systems</h3>
-
-                                    <img src="/images/drip-large.png" class="big-drop">
-                                    <img src="/images/drip-large.png" class="small-drop">
-                                    <img src="/images/arrow.png" class="arrow">
-
-                                    <figcaption>
-                                        <span class="italic">Source:</span> Australian Bureau of Statistics
-                                    </figcaption>
-                                </figure>
-                            </div>
-
-                            <div id="variable">
-
-                                <figure>
-                                     <h3 class="center"><span class="italic">Rainfall is wildly unpredictable</span> and conditions veer between drought and flood all along the system.</h3>
-                                    <div id="rainfall-chart">
-                                    <img src="/images/rainfall-chart.png" class="chart"></div>
-                                    <figcaption><span class="italic">Source:</span> Australian Bureau of Statistics</figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="crops" class="scrollblock container">
-                <div class="row-fluid">
-                    <div class="span4">
-                        <div id="percentage">
-                            <img src="/images/percentage-drop.jpg">
-                            <h2>54.5<sup>%</sup> <span>Approx.</span></h2>
-                        </div>
-                    </div>
-
-                    <div class="span8">
-                        <h1>Crops <span>Cotton socks and laser beams</span></h1>
-                        <p class="leadin">
-                          Over the years farmers have carved out canals and levees to extract water from the rivers and the majority of water is used for Basin crops. Planted crops alone were worth more than $9.5 billion in 2005-06.
-                        </p>
-                    </div>
-                </div>
-
-                <div id="gross-value" class="row-fluid">
-                    <div class="offset4 span8">
-                        <figure>
-                            <h3>Gross value of agricultural production <span class="italic">in the Murray-Darling Basin — 2005–06</span></h3>
-                            <div id="gross-value-chart"><img src="/images/crops-value-chart.png" class="chart"></div>
-                            <figcaption><span class="italic">Source:</span> Australian Bureau of Statistics</figcaption>
-                        </figure>
-                    </div>
-                </div>
-
-                <div id="technology" class="row-fluid">
-                    <div class="offset4 span8">
-                        <h2 class="strikeout"><span>Technology heading</span></h2>
-
-                        <p>To best utilise the scarce water of the region, farmers have needed to develop sophisticated technologies. Some use satellite farming techniques, whereby they gather data via satellite mapping; knowing the soil moisture in a paddock a half-hour's drive away can be done with a click of a button.</p>
-
-                        <p>Although long maligned as too thirsty to grow in Australia, the rice crops of the Basin have the highest yields in the world. To save water, farmers use a laser to accurately level the paddocks. The end result is a flat, slightly slanted paddock where a smaller amount of water can flow across, get to the end, and be pumped back to the top to use again. <sup><a href="#">3</a></sup></p>
-
-                        <figure>
-                            <div id="laser-levelling">
-                                <div id="laser-levelling-illustration">
-                                    <h3>How laser levelling works</h3>
-
-                                    <p>The <em>transmitter</em> emits a laser beam as a reference point</p>
-
-                                    <p>The beam is read by the <em>receiver</em> and passed to the <em>control box</em></p>
-
-                                    <p>The <em>control box</em> interprets the signal and adjusts the position of the <em>levelling bucket</em> to grade the field at the desired angle</p>
-
-                                    <p class="field">Fields are graded at a <em>very slight angle</em> to enable the water to flow down at the most efficient rate.</p>
-
-                                    <img src="/images/laser-level.png" alt="Laser Levelling Example">
-                                </div>
-                            </div>
-                        </figure>
-                    </div>
-                </div>
-
-                <div id="cotton" class="row-fluid">
-                    <div class="offset4 span8">
-                        <h2 class="strikeout"><span>Controversial cotton</span></h2>
-
-                        <p>Last decade the cotton crop consumed around 20% of all irrigated water from the basin. Yet a sample year (2005-06) shows that cotton only contributed 6% of the basin's production in dollars. <sup><a href="#">3</a></sup></p>
-
-                        <figure>
-                            <div id="water-use">
-                                <h3>Proportional water use for cotton <span class="italic">in the Murray-Darling Basin — 2005-06</span></h3>
-                                <div id="water-use-chart"><img src="/images/cotton-water-chart.png" class="chart"></div>
-                            </div>
-
-                            <div id="value">
-                                <h3>Proportional gross value of cotton <span class="italic">in the Murray-Darling Basin — 2005-06</span></h3>
-                                <div id="value-chart"><img src="/images/cotton-dollars-chart.png" class="chart"></div>
-                                <figcaption><span class="italic">Source:</span> Australian Bureau of Statistics</figcaption>
-                            </div>
-                        </figure>
-                    </div>
-                </div>
-            </section>
-
-            <section id="livestock" class="scrollblock container">
-                <div class="row-fluid">
-                    <div class="span4">
-                        <div id="percentage">
-                            <img src="/images/percentage-drop.jpg">
-                            <h2>27.5<sup>%</sup> <span>Approx.</span></h2>
-                        </div>
-                    </div>
-
-                    <div class="span8">
-                        <h1>Livestock &amp; Dairy <span>Wooly jumpers and your morning coffee</span></h1>
-                        <p class="leadin">
-                        </p>
-                    </div>
-
-                    <div id="sheep" class="row-fluid">
-                        <div class="offset4 span8">
-                            <figure>
-                                <div id="sheep-chart">
-                                    <h3><span class="italic">The Basin has </span>
-                                        45% of the nation&rsquo;s sheep stock
-                                        <span class="small italic">(including meat stocks)</span>
-                                    </h3>
-
-                                    <img src="/images/sheep.png" class="sheep-pic">
-                                </div>
-
-                                <figcaption><span class="italic">Source:</span> Australian Bureau of Statistics</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-
-                    <div id="milk" class="row-fluid">
-                        <div class="offset4 span8">
-                            <h2 class="strikeout"><span>Where does your latte come from?</span></h2>
-
-                            <p class="left">
-                                If you're drinking your milky morning coffee in NSW or Victoria, it's highly likely to be from a Basin cow, as <strong class="italic">one-third of the dairy cows in Australia are hoofing around the fertile plains of the Basin.</strong> <sup><a href="#">3</a></sup>
-                            </p>
-
-                            <div id="coffee-chart" class="offset6">
-                                <div class="percent"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="thristy" class="row-fluid">
-                        <div class="offset4 span8">
-                            <h2 class="strikeout"><span>Thirsty stock</span></h2>
-
-                            <p>
-                                More water is used for farming livestock than you would think, with farmers needing to draw extra water from underground sources and irrigation, especially in times of drought. Also, if rainfall is not supporting decent pasture growth for the livestock&rsquo;s feed, they must be fed hay, which might require irrigated water to grow. The Basin supplies 44% of Australia&rsquo;s hay for livestock. <sup><a href="#">3</a></sup>
-                            </p>
-
-
-
-                            <figure>
-                                <h3>Highest water use for agriculture<span class="italic"> in the Murray-Darling Basin 2010–11</span></h3>
-                                <div id="water-use-chart"></div>
-                                <figcaption><span class="italic">Source:</span> Australian Bureau of Statistics</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="trading" class="scrollblock breakout">
-                <div class="container">
-                    <h1>Water buying back<span class="italic">-wards & forwards</span></h1>
-
-                    <div class="row-fluid">
-                        <div class="span6">
-                            <p class="leadin">
-                                Australia is the driest continent in the world and for most farmer cannot rely on regular rainfall.
-                            </p>
-
-                            <p class="leadin">
-                                So in the years since European settlement, farmers connected by irrigation channels to, or neighbouring, the rivers in the Basin have taken out water from the system.
-                            </p>
-
-                            <p class="leadin">
-                                This process was formalized in the twentieth century and water trading was set up to manage and distribute the commodity in the competing regions. But it still relied on a variable yard-stick to limit water use which is known as &rdquo;The Cap&rdquo;. This means that a water allocation purchased by a farmer is not a set amount of water they get each year; rather, it's more like a share or percentage system.
-                            </p>
-
-                            <p class="leadin">
-                                Farmers can hold permanent water allocations and trade temporary entitlements from year to year to bolster productivity between different types of agricultural production. For example, in times of drought rice farmers can choose not to plant their rice crop and instead sell their water allocations to farmers who have a long-life crop, like fruit trees, so they still have an income.
-                            </p>
-                        </div>
-
-                        <div class="span6">
-                            <h2>Volume of water traded <span>in the southern MBD &mdash; 2008-09</span></h2>
-                            <div id="water-trading-vis"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="rest" class="scrollblock container">
-                <div class="row-fluid">
-                    <div class="span4">
-                        <div id="percentage">
-                            <img src="/images/percentage-drop.jpg">
-                            <h2>18<sup>%</sup> <span>Approx.</span></h2>
-                        </div>
-                    </div>
-
-                    <div class="span8">
-                        <h1>The rest... <span>Is the glass half full?</span></h1>
-                        <p class="leadin">
-                            The remaining Basin water is consumed as drinking water, lost during transportation, or used for mining and industrial activity. While mining uses only a small proportion of the Basin&rsquo;s water capital there are ongoing concerns about the mines&rsquo; affect on the health of the river system. <sup><a href="#">3</a></sup>
-                        </p>
-                    </div>
-                </div>
-
-                <div id="drink" class="row-fluid">
-                    <div class="offset4 span8">
-                        <h2 class="strikeout"><span>Drink up</span></h2>
-
-                        <p>Over three million people rely on the Murray Darling Basin for drinking water. The two largest Basin drinking cities of Canberra and Adelaide are at different extremes of the river system: Canberra sources its water at the upper end of the system, from subsidiaries of the Murrumbidgee river; and Adelaide gets its water from the end of the Murray River, after all of the other subsidiary rivers have flowed into it, and irrigators have taken water out of it.</p>
-
-                        <p>A good gauge of the taste of the water is to measure the concentration of calcium carbonate in the drinking water. Higher levels of calcium carbonate mean that the water is ‘hard&rsquo; and has a strong mineral taste, whereas ‘soft&rsquo; water tastes flatter, or most would say <em class="italic">better</em>. <sup><a href="#">3</a></sup></p>
-
-                        <h3>Water hardness in Australian cities</h3>
-                        <figure>
-                            <div id="water-hardness-chart">
-                                <img src="/images/water-hardness.png" class="water-hardness"></div>
-                            <figcaption><span class="italic">Source:</span> Wikipedia</figcaption>
-                        </figure>
-                    </div>
-                </div>
-
-                <div id="transmission" class="row-fluid">
-                    <div class="offset4 span8">
-                        <h2 class="strikeout"><span>Lost in Translation</span></h2>
-
-                        <p>Another controversial issue for the Basin is the large amount of water that is ‘lost&rsquo; during transmission. This is water that doesn&rsquo;t get used for agriculture, as somewhere during its transportation from the river to the paddock it has either evaporated, seeped through a canal bank, flooded over the river bank onto a floodplain, or a bevy of issues caused by weaknesses in the irrigation infrastructure. Environmentalists argue that this water is not ‘lost&rsquo;, and is actually naturally returning to the environment – topping up acquifers and maintaining natural floodplains and other important ecological considerations. <sup><a href="#">3</a></sup></p>
-
-
-                        <figure>
-                            <h3>
-                                Diversions and losses
-                                <span class="italic">in the Southern Murray-Darling Basin — 2007-08</span>
-                            </h3>
-                            <div id="transmission-chart">
-                                <img src="/images/transmission-chart.png" class="chart"></div>
-                            <figcaption><span class="italic">Source:</span> Wikipedia</figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </section>
-
-            <section id="environment" class="scrollblock breakout">
-                <div class="container">
-                    <h1>What&rsquo;s left for the environment?</h1>
-
-                    <div class="row-fluid">
-                        <div class="span6">
-                            <p>
-                                The <a href="http://www.mdba.gov.au/sustainable-rivers-audit/" target="_blank">2008 Government report</a> auditing the health of the Basin rivers showed that the it had been severely compromised. Water allocation policies have put pressure on farmers, leaving some areas without enough water during drought.
-                            </p>
-
-                            <p>
-                                Even the iconic river red gums are dying of thirst.
-                            </p>
-
-                            <p>
-                                Farming fertilizers, chemicals and manure from livestock grazing collect in the river system, increasing nutrients which can lead to side effects including blue-green algae that can bloom uncontrollably, poisoning the water.
-                            </p>
-
-                            <p>
-                                And farmland has often been cleared right up to the river banks damaging the ecosystem of the river, removing vital trees and shrubs from the riparian zone that help maintain river health. Land clearing has also caused the water table to rise increasing the risk of salinity.
-                            </p>
-                        </div>
-
-                        <figure class="span6 offset6 map">
-                            <h3 class="span4">Ecosystem Health assessments by Valley —
-                            <span class="italic"> Murray Darling Basin 2004-07 </span></h3>
-
-                            <div id="health-map"></div>
-                            <figcaption><span class="italic">Source:</span> Wikipedia</figcaption>
-                        </figure>
-                    </div>
-
-                    <div id="salinity" class="row-fluid">
-                        <h2 class="strikeout"><span>Salinity header</span></h2>
-
-                        <div class="span4">
-                            <p>
-                                Australia is naturally salty, with the river system acting as a cleanser.
-                            </p>
-
-                            <p>
-                                In the millennium drought – between 1995 and 2012 – the mouth of the Murray in South Australia almost completely dried up. The southern lakes at their driest dropped to 1.5 meters below sea level.
-                            </p>
-
-                            <p>
-                                With high salinity comes death. Livestock and other animals can&rsquo;t drink – and plants that aren&rsquo;t equipped to deal with high salinity will wither and die. <sup><a href="#">3</a></sup>
-                            </p>
-                        </div>
-
-                        <figure class="span8">
-                            <h3>
-                                Water and salinity levels — <span class="italic">Lake Alexandrina, Lower Murray Darling Basin </span>
-                            </h3>
-
-                            <div id="salinity-chart"><img src="/images/salinity-chart.png" class="chart"></div>
-
-                            <figcaption>
-                                <span class="italic">Source:</span> Wikipedia
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <div id="species" class="row-fluid">
-                        <h2 class="strikeout"><span>Species loss header</span></h2>
-
-                        <div class="span4">
-                            <p>
-                                The Murray Cod (a freshwater fish vulnerable to rising salinity and sometimes isolated in stagnating pools as water dried up) has been in decline for some time. They were listed as a vulnerable species under the conservation act in 1999 due to an estimated 30 percent decline over the past 50 years.
-                            </p>
-
-                            <p>
-                                The fish community across the Murray-Darling basin is suffering, with native fish outnumbered in most areas by alien species.
-                            </p>
-                        </div>
-
-                        <figure class="span8">
-                            <h3>
-                                Total catch of Murray cod <span class="italic">1947–48 to 1995–96</span>
-                            </h3>
-
-                            <div id="cod-chart"><img src="/images/cod-chart.png" class="chart"></div>
-
-                            <figcaption>
-                                <span class="italic">Source:</span> Wikipedia
-                            </figcaption>
-                        </figure>
-
-                        <figure class="span8 offset4">
-                            <h3>
-                                Threatened native fish species in the Basin — <span class="italic">Listed as endangered, vulnerable or protected (State or Commonwealth)</span>
-                            </h3>
-
-                            <div id="species-chart"><img src="/images/species-chart.png" class="chart"></div>
-
-                            <figcaption>
-                                <span class="italic">Source:</span> Wikipedia
-                            </figcaption>
-                        </figure>
-                    </div>
-
-                    <div id="conclusion" class="row-fluid">
-                        <h2 class="strikeout"><span>Conclusion header</span></h2>
-                        <div class="span8 offset4">
-                            <p>The Murray-Darling Basin plan, signed into law near the end of 2012, will spend $11.5 billion to try and fix the system. It includes a water return target of 3200GL.
-                            </p>
-
-                            <p>But is the plan enough – can this river system be saved?</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      </div>
+    </nav>
+
+    <div class="row-fluid scrollblock">
+      <div class="intro-banner">
+        <img src="/images/drip.png" alt="Water Prop" class="drop">
+        <h1>Where The <span>Water Goes</span></h1>
+        <h2>A Murray-Darling Primer</h2>
+      </div>
+    </div>
+  </header>
+
+  <div id="main" role="main">
+    <div id="river-container" class="container">
+        <div id="river">
+          <img src="/images/river.jpg" alt="River">
+
+          <div class="crops-percentage">54.5<sup>%</sup> <small>Approx.</small></div>
+          <div class="livestock-percentage">27.5<sup>%</sup> <small>Approx.</small></div>
+          <div class="rest-percentage">18% <small>Approx.</small></div>
         </div>
     </div>
 
-    <!-- build:js scripts/amd-app.js -->
-    <script data-main="scripts/main" src="vendor/require.js"></script>
-    <!-- endbuild -->
+    <div id="content-container">
+      <section id="introduction" class="scrollblock container">
+        <div class="fade-wrapper">
+          <div class="row-fluid">
+            <div class="span4">
+              <div id="basin-location">
+               <!--  <iframe width="290" height="290" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com.au/maps?q=https:%2F%2Fmaps.google.com.au%2Fmaps%2Fms%3Fauthuser%3D0%26vps%3D2%26ie%3DUTF8%26msa%3D0%26output%3Dkml%26msid%3D207203093288942235772.0004cf96683ae769ae541&amp;hl=en&amp;sll=-32.297289,145.931382&amp;sspn=17.453389,23.444824&amp;t=p&amp;ie=UTF8&amp;ll=-32.175612,145.634766&amp;spn=21.496363,25.400391&amp;z=4&amp;output=embed"></iframe> -->
+              </div>
+            </div>
+
+            <div class="span8">
+              <h1>Why Care About The Murray-Darling Basin?</h1>
+
+              <p class="leadin">
+                It's Australia&rsquo;s food bowl. Provides 40% of Australia&rsquo;s agricultural production. Two million people live in the Basin, accounting for _____ of Australia&rsquo;s GDP.
+              </p>
+
+              <p class="leadin">
+                The basin also carries great significance for many Aboriginal nations. Today, there are over 10,000 Aboriginal sites in the basin area, including sacred sites and burial grounds.
+              </p>
+            </div>
+          </div>
+
+          <div id="its-long" class="row-fluid">
+            <div class="offset4 span8">
+              <h2 class="strikeout"><span>It's Long</span></h2>
+
+              <p>
+                The world&rsquo;s 15th longest river system, it culminates to be a thousand kilometres longer than the Zambesi in Africa. The waterways flow from highlands, like Kosciuszko National Park and the Great Dividing Range in Southern Queensland, but all of Basin&rsquo;s tributaries end up in the one location: at the mouth of the Murray river in South Australia.
+              </p>
+
+              <figure>
+                <div id="length-graph-container" class="graph"></div>
+                <figcaption><span class="italic">Source:</span> Australian Bureau of Statistics</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div id="and-its-big" class="row-fluid">
+            <div class="offset4 span8">
+              <h2 class="strikeout"><span>And It's Big</span></h2>
+
+              <h3 class="info">
+                <span class="italic">The Murray-Darling Basin covers an area nearly</span> two times the size of France. <sup><a href="#">2</a></sup>
+              </h3>
+
+              <div class="murray-map map">
+                Murray-Darling Basin Area <strong>1,061,469</strong><em>km<sup>2</sup></em>
+              </div>
+
+              <div class="france-map map">
+                France <strong>674,800</strong><em>km<sup>2</sup></em>
+              </div>
+
+              <figure>
+                <div id="length-graph-container" class="graph"></div>
+                <figcaption>
+                  <span class="italic">Source:</span> Australian Bureau of Statistics
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div id="we-depend-on-it" class="row-fluid">
+            <div class="offset4 span8">
+              <h2 class="strikeout"><span>We Depend On It</span></h2>
+
+              <!-- <p>Provides 40% of Australia's agricultural production. 2 million people live in the Basin, account for _____ of Australia's GDP. <sup><a href="#">3</a></sup></p> -->
+
+              <figure>
+                <h3>
+                  Percentage of Australia's production <span class="italic">in the Murray-Darling Basin</span>
+                </h3>
+
+                <div id="production-percentage-chart"></div>
+
+                <figcaption>
+                  <span class="italic">Source:</span> Australian Bureau of Statistics
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div id="fragile" class="row-fluid">
+            <div class="offset4 span8">
+              <h2 class="strikeout"><span>But it is fragile</span></h2>
+
+              <p>It is an extremely vulnerable river system, as most of the rainfall it gets each year is lost to evaporation. The Murray Darling Basin covers the same area as the Indus Basin which spans parts of India and Pakistan. While the Indus Basin loses 10% of rainfall to evaporation, the Murray-Darling loses a whopping 94%. <sup><a href="#">3</a></sup></p>
+
+              <div id="evaporation">
+                <figure>
+                  <h3 class="left"><span class="italic">Of the average 530,618 GL of rainfall,</span> 94% is lost through evaporation</h3>
+                  <h3 class="right"><span class="italic">This leaves just </span>6% for the river systems</h3>
+
+                  <img src="/images/drip-large.png" class="big-drop">
+                  <img src="/images/drip-large.png" class="small-drop">
+                  <img src="/images/arrow.png" class="arrow">
+
+                  <figcaption>
+                    <span class="italic">Source:</span> Australian Bureau of Statistics
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div id="variable">
+                <figure>
+                  <h3 class="center"><span class="italic">Rainfall is wildly unpredictable</span> and conditions veer between drought and flood all along the system.</h3>
+
+                  <div id="rainfall-chart">
+                    <img src="/images/rainfall-chart.png" class="chart">
+                  </div>
+
+                  <figcaption>
+                    <span class="italic">Source:</span> Australian Bureau of Statistics
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="crops" class="scrollblock container">
+        <div class="row-fluid">
+          <div class="offset4 span8">
+            <h1>Crops <span>Cotton socks and laser beams</span></h1>
+            <p class="leadin">
+              Over the years farmers have carved out canals and levees to extract water from the rivers and the majority of water is used for Basin crops. Planted crops alone were worth more than $9.5 billion in 2005-06.
+            </p>
+          </div>
+        </div>
+
+        <div id="gross-value" class="row-fluid">
+          <div class="offset4 span8">
+            <figure>
+              <h3>Gross value of agricultural production <span class="italic">in the Murray-Darling Basin — 2005–06</span></h3>
+
+              <div id="gross-value-chart">
+                <img src="/images/crops-value-chart.png" class="chart">
+              </div>
+
+              <figcaption>
+                <span class="italic">Source:</span> Australian Bureau of Statistics
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div id="technology" class="row-fluid">
+          <div class="offset4 span8">
+            <h2 class="strikeout"><span>Technology heading</span></h2>
+
+            <p>To best utilise the scarce water of the region, farmers have needed to develop sophisticated technologies. Some use satellite farming techniques, whereby they gather data via satellite mapping; knowing the soil moisture in a paddock a half-hour's drive away can be done with a click of a button.</p>
+
+            <p>Although long maligned as too thirsty to grow in Australia, the rice crops of the Basin have the highest yields in the world. To save water, farmers use a laser to accurately level the paddocks. The end result is a flat, slightly slanted paddock where a smaller amount of water can flow across, get to the end, and be pumped back to the top to use again. <sup><a href="#">3</a></sup></p>
+
+            <figure>
+              <div id="laser-levelling">
+                <div id="laser-levelling-illustration">
+                  <h3>How laser levelling works</h3>
+
+                  <p>The <em>transmitter</em> emits a laser beam as a reference point</p>
+
+                  <p>The beam is read by the <em>receiver</em> and passed to the <em>control box</em></p>
+
+                  <p>The <em>control box</em> interprets the signal and adjusts the position of the <em>levelling bucket</em> to grade the field at the desired angle</p>
+
+                  <p class="field">Fields are graded at a <em>very slight angle</em> to enable the water to flow down at the most efficient rate.</p>
+
+                  <img src="/images/laser-level.png" alt="Laser Levelling Example">
+                </div>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <div id="cotton" class="row-fluid">
+          <div class="offset4 span8">
+            <h2 class="strikeout"><span>Controversial cotton</span></h2>
+
+            <p>Last decade the cotton crop consumed around 20% of all irrigated water from the basin. Yet a sample year (2005-06) shows that cotton only contributed 6% of the basin's production in dollars. <sup><a href="#">3</a></sup></p>
+
+            <figure>
+              <div id="water-use">
+                <h3>Proportional water use for cotton <span class="italic">in the Murray-Darling Basin — 2005-06</span></h3>
+                <div id="water-use-chart"><img src="/images/cotton-water-chart.png" class="chart"></div>
+              </div>
+
+              <div id="value">
+                <h3>Proportional gross value of cotton <span class="italic">in the Murray-Darling Basin — 2005-06</span></h3>
+
+                <div id="value-chart">
+                  <img src="/images/cotton-dollars-chart.png" class="chart">
+                </div>
+
+                <figcaption>
+                  <span class="italic">Source:</span> Australian Bureau of Statistics
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <div id="livestock-pinning-wrapper">
+        <section id="livestock" class="scrollblock container">
+          <div class="row-fluid">
+            <div class="offset4 span8">
+              <h1>Livestock &amp; Dairy <span>Wooly jumpers and your morning coffee</span></h1>
+              <p class="leadin"></p>
+            </div>
+
+            <div id="sheep" class="row-fluid">
+              <div class="offset4 span8">
+                <figure>
+                  <div id="sheep-chart">
+                    <h3>
+                      <span class="italic">The Basin has </span>
+                      45% of the nation&rsquo;s sheep stock
+                      <span class="small italic">(including meat stocks)</span>
+                    </h3>
+
+                    <img src="/images/sheep.png" class="sheep-pic">
+                  </div>
+
+                  <figcaption>
+                    <span class="italic">Source:</span> Australian Bureau of Statistics
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div id="milk" class="row-fluid">
+              <div class="offset4 span8">
+                <h2 class="strikeout"><span>Where does your latte come from?</span></h2>
+
+                <p class="left">
+                  If you're drinking your milky morning coffee in NSW or Victoria, it's highly likely to be from a Basin cow, as <strong class="italic">one-third of the dairy cows in Australia are hoofing around the fertile plains of the Basin.</strong> <sup><a href="#">3</a></sup>
+                </p>
+
+                <div id="coffee-chart" class="offset6">
+                  <div class="percent"></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="thristy" class="row-fluid">
+              <div class="offset4 span8">
+                <h2 class="strikeout"><span>Thirsty stock</span></h2>
+
+                <p>
+                  More water is used for farming livestock than you would think, with farmers needing to draw extra water from underground sources and irrigation, especially in times of drought. Also, if rainfall is not supporting decent pasture growth for the livestock&rsquo;s feed, they must be fed hay, which might require irrigated water to grow. The Basin supplies 44% of Australia&rsquo;s hay for livestock. <sup><a href="#">3</a></sup>
+                </p>
+
+                <figure>
+                  <h3>Highest water use for agriculture<span class="italic"> in the Murray-Darling Basin 2010–11</span></h3>
+                  <div id="water-use-chart"></div>
+                  <figcaption><span class="italic">Source:</span> Australian Bureau of Statistics</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="trading" class="scrollblock breakout">
+          <div class="container">
+            <h1>Water buying back<span class="italic">-wards & forwards</span></h1>
+
+            <div class="row-fluid">
+              <div class="span6">
+                <p class="leadin">
+                  Australia is the driest continent in the world and for most farmer cannot rely on regular rainfall.
+                </p>
+
+                <p class="leadin">
+                  So in the years since European settlement, farmers connected by irrigation channels to, or neighbouring, the rivers in the Basin have taken out water from the system.
+                </p>
+
+                <p class="leadin">
+                  This process was formalized in the twentieth century and water trading was set up to manage and distribute the commodity in the competing regions. But it still relied on a variable yard-stick to limit water use which is known as &rdquo;The Cap&rdquo;. This means that a water allocation purchased by a farmer is not a set amount of water they get each year; rather, it's more like a share or percentage system.
+                </p>
+
+                <p class="leadin">
+                  Farmers can hold permanent water allocations and trade temporary entitlements from year to year to bolster productivity between different types of agricultural production. For example, in times of drought rice farmers can choose not to plant their rice crop and instead sell their water allocations to farmers who have a long-life crop, like fruit trees, so they still have an income.
+                </p>
+              </div>
+
+              <div class="span6">
+                <h2>Volume of water traded <span>in the southern MBD &mdash; 2008-09</span></h2>
+                <div id="water-trading-vis"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section id="rest" class="scrollblock container">
+        <div class="row-fluid">
+          <div class="offset4 span8">
+            <h1>The rest... <span>Is the glass half full?</span></h1>
+            <p class="leadin">
+              The remaining Basin water is consumed as drinking water, lost during transportation, or used for mining and industrial activity. While mining uses only a small proportion of the Basin&rsquo;s water capital there are ongoing concerns about the mines&rsquo; affect on the health of the river system. <sup><a href="#">3</a></sup>
+            </p>
+          </div>
+        </div>
+
+        <div id="drink" class="row-fluid">
+          <div class="offset4 span8">
+            <h2 class="strikeout"><span>Drink up</span></h2>
+
+            <p>Over three million people rely on the Murray Darling Basin for drinking water. The two largest Basin drinking cities of Canberra and Adelaide are at different extremes of the river system: Canberra sources its water at the upper end of the system, from subsidiaries of the Murrumbidgee river; and Adelaide gets its water from the end of the Murray River, after all of the other subsidiary rivers have flowed into it, and irrigators have taken water out of it.</p>
+
+            <p>A good gauge of the taste of the water is to measure the concentration of calcium carbonate in the drinking water. Higher levels of calcium carbonate mean that the water is ‘hard&rsquo; and has a strong mineral taste, whereas ‘soft&rsquo; water tastes flatter, or most would say <em class="italic">better</em>. <sup><a href="#">3</a></sup></p>
+
+            <h3>Water hardness in Australian cities</h3>
+
+            <figure>
+              <div id="water-hardness-chart">
+                  <img src="/images/water-hardness.png" class="water-hardness">
+              </div>
+
+              <figcaption>
+                <span class="italic">Source:</span> Wikipedia
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div id="transmission" class="row-fluid">
+          <div class="offset4 span8">
+            <h2 class="strikeout"><span>Lost in Translation</span></h2>
+
+            <p>
+              Another controversial issue for the Basin is the large amount of water that is ‘lost&rsquo; during transmission. This is water that doesn&rsquo;t get used for agriculture, as somewhere during its transportation from the river to the paddock it has either evaporated, seeped through a canal bank, flooded over the river bank onto a floodplain, or a bevy of issues caused by weaknesses in the irrigation infrastructure. Environmentalists argue that this water is not ‘lost&rsquo;, and is actually naturally returning to the environment – topping up acquifers and maintaining natural floodplains and other important ecological considerations. <sup><a href="#">3</a></sup>
+            </p>
+
+            <figure>
+              <h3>
+                Diversions and losses
+                <span class="italic">in the Southern Murray-Darling Basin — 2007-08</span>
+              </h3>
+
+              <div id="transmission-chart">
+                <img src="/images/transmission-chart.png" class="chart">
+              </div>
+
+              <figcaption>
+                <span class="italic">Source:</span> Wikipedia
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="environment" class="scrollblock breakout">
+        <div class="container">
+          <h1>What&rsquo;s left for the environment?</h1>
+
+          <div class="row-fluid">
+            <div class="span6">
+              <p>
+                The <a href="http://www.mdba.gov.au/sustainable-rivers-audit/" target="_blank">2008 Government report</a> auditing the health of the Basin rivers showed that the it had been severely compromised. Water allocation policies have put pressure on farmers, leaving some areas without enough water during drought.
+              </p>
+
+              <p>
+                Even the iconic river red gums are dying of thirst.
+              </p>
+
+              <p>
+                Farming fertilizers, chemicals and manure from livestock grazing collect in the river system, increasing nutrients which can lead to side effects including blue-green algae that can bloom uncontrollably, poisoning the water.
+              </p>
+
+              <p>
+                And farmland has often been cleared right up to the river banks damaging the ecosystem of the river, removing vital trees and shrubs from the riparian zone that help maintain river health. Land clearing has also caused the water table to rise increasing the risk of salinity.
+              </p>
+            </div>
+
+            <figure class="span6 offset6 map">
+              <h3 class="span4">Ecosystem Health assessments by Valley —
+              <span class="italic"> Murray Darling Basin 2004-07 </span></h3>
+
+              <div id="health-map"></div>
+              <figcaption><span class="italic">Source:</span> Wikipedia</figcaption>
+            </figure>
+          </div>
+
+          <div id="salinity" class="row-fluid">
+            <h2 class="strikeout"><span>Salinity header</span></h2>
+
+            <div class="span4">
+              <p>
+                Australia is naturally salty, with the river system acting as a cleanser.
+              </p>
+
+              <p>
+                In the millennium drought – between 1995 and 2012 – the mouth of the Murray in South Australia almost completely dried up. The southern lakes at their driest dropped to 1.5 meters below sea level.
+              </p>
+
+              <p>
+                With high salinity comes death. Livestock and other animals can&rsquo;t drink – and plants that aren&rsquo;t equipped to deal with high salinity will wither and die. <sup><a href="#">3</a></sup>
+              </p>
+            </div>
+
+            <figure class="span8">
+              <h3>
+                Water and salinity levels — <span class="italic">Lake Alexandrina, Lower Murray Darling Basin </span>
+              </h3>
+
+              <div id="salinity-chart"><img src="/images/salinity-chart.png" class="chart"></div>
+
+              <figcaption>
+                <span class="italic">Source:</span> Wikipedia
+              </figcaption>
+            </figure>
+          </div>
+
+          <div id="species" class="row-fluid">
+            <h2 class="strikeout"><span>Species loss header</span></h2>
+
+            <div class="span4">
+              <p>
+                The Murray Cod (a freshwater fish vulnerable to rising salinity and sometimes isolated in stagnating pools as water dried up) has been in decline for some time. They were listed as a vulnerable species under the conservation act in 1999 due to an estimated 30 percent decline over the past 50 years.
+              </p>
+
+              <p>
+                The fish community across the Murray-Darling basin is suffering, with native fish outnumbered in most areas by alien species.
+              </p>
+            </div>
+
+            <figure class="span8">
+              <h3>
+                Total catch of Murray cod <span class="italic">1947–48 to 1995–96</span>
+              </h3>
+
+              <div id="cod-chart"><img src="/images/cod-chart.png" class="chart"></div>
+
+              <figcaption>
+                <span class="italic">Source:</span> Wikipedia
+              </figcaption>
+            </figure>
+
+            <figure class="span8 offset4">
+              <h3>
+                Threatened native fish species in the Basin — <span class="italic">Listed as endangered, vulnerable or protected (State or Commonwealth)</span>
+              </h3>
+
+              <div id="species-chart">
+                <img src="/images/species-chart.png" class="chart">
+              </div>
+
+              <figcaption>
+                <span class="italic">Source:</span> Wikipedia
+              </figcaption>
+            </figure>
+          </div>
+
+          <div id="conclusion" class="row-fluid">
+            <h2 class="strikeout"><span>Conclusion header</span></h2>
+            <div class="span8 offset4">
+              <p>
+                The Murray-Darling Basin plan, signed into law near the end of 2012, will spend $11.5 billion to try and fix the system. It includes a water return target of 3200GL.
+              </p>
+
+              <p>But is the plan enough – can this river system be saved?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- build:js scripts/amd-app.js -->
+  <script data-main="scripts/main" src="vendor/require.js"></script>
+  <!-- endbuild -->
 </body>
 </html>
