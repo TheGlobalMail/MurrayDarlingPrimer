@@ -55,7 +55,7 @@ define(['jquery', 'lodash'], function($, _) {
   }
 
   function percentageCalc(offset, scrollTop) {
-    var halfwayOffset = offset.top + (offset.bottom - offset.top) * 0.6;
+    var halfwayOffset = offset.top + (offset.bottom - offset.top) * 0.9;
 
     if (scrollTop <= halfwayOffset) {
       return 0;
