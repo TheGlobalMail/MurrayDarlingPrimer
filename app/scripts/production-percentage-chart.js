@@ -56,15 +56,6 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
       .attr('width', imageWidth - 7)
       .attr('height', totalRowHeight - 8);
 
-    // bar background pattern
-    graph.append('defs').append('svg:pattern')
-      .attr({ id: 'barstripesbackground', height: 1, width: 0.1 })
-      .append('image')
-        .attr('xlink:href', '/images/bar-stripes.png')
-        .attr('height', 30)
-        .attr('width', 303)
-        .attr('x', 0).attr('y', 0);
-
     // bar background
     g.append('rect')
       .attr('y', barY)

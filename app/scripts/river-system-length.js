@@ -38,14 +38,13 @@ define(['d3', 'lodash', 'jquery', 'accounting', 'jquery.scrollwatch'], function(
 
     var g = graph.selectAll('g').data(data).enter().append('g');
 
+    // bar background pattern
     graph.append('defs').append('svg:pattern')
-      .attr('id', 'barstripesbackground')
-      .attr('height', 1)
-      .attr('width', 0.1)
+      .attr({ id: 'barstripesbackground', height: 1, width: 1 })
       .append('image')
         .attr('xlink:href', '/images/bar-stripes.png')
         .attr('height', 30)
-        .attr('width', 303)
+        .attr('width', 700)
         .attr('x', 0).attr('y', 0);
 
     // bar background
