@@ -71,7 +71,14 @@ if (window.isMobileSafari) {
         };
 }());
 
-require(['basin-size', 'production-percentage-chart', 'river-system-length', 'water-trading', 'river-pinner'], function() {
+require([
+  'basin-size',
+  'production-percentage-chart',
+  'river-system-length',
+  'water-trading',
+  'river-pinner',
+  'water-use-chart'
+], function() {
   'use strict';
 
   function hideAddressBar() {

@@ -20,7 +20,6 @@ define(['d3', 'lodash', 'jquery', 'accounting', 'jquery.scrollwatch'], function(
   var init = function(graphWidth) {
     $graph.empty();
     graphWidth = graphWidth || 540;
-    console.log('render at', graphWidth);
 
     var x = function(prop) {
       var scale = d3.scale.linear()
