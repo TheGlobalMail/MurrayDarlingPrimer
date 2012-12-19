@@ -88,16 +88,14 @@
             .box-shadow(none);
             border-bottom: none;
         }
-<<<<<<< HEAD
-        #percentage {
-=======
+
         .percentage {
+          display: block;
             .font-size(30);
-            font-weight: 900;
-        font-style: italic;
->>>>>>> ed1d797... Merge stash
+            font-style: italic;
             margin-top: 0;
             position: absolute;
+            top: 8px;
             right: 5%;
             img {
                 display: block;
@@ -106,12 +104,20 @@
                 top: 16px;
             }
             h2 {
+                .font-size(84);
+                font-weight: 900;
+                letter-spacing: -0.03em;
+                line-height: .9;
                 color: #e2e7ec;
                 right: 0;
+                sup {
+                  top: -0.3em;
+                }
                 span {
                     position: absolute;
                     right: 4px;
                     .font-size(13);
+                    letter-spacing: 0;
                     margin-top: -17px;
                 }
             }
@@ -236,21 +242,21 @@
         .leadin {
             .font-size(14);
         }
-        section #percentage {
-            top: 15px;
-            img {
-                width: 22px;
-                top: 12px;
-                left: -26px;
-            }
-            h2 {
-                .font-size(40);
-                span {
-                    .font-size(10);
-                    right: -10px;
-                    margin-top: -11px;
+        section .percentage {
+          top: 15px;
+          img {
+            width: 22px;
+            top: 12px;
+            left: -26px;
+          }
+          h2 {
+            .font-size(40);
+            span {
+                .font-size(10);
+                right: -10px;
+                margin-top: -11px;
                 }
-            }
+          }
         }
     }
 
