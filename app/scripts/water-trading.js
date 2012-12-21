@@ -74,7 +74,7 @@ define(['d3', 'jquery', 'lodash'], function(d3, $, _) {
     // render arrows
     svg.append('g')
       .selectAll('path').data(arrows).enter().append('path')
-        .attr({ id: yoink('id'), d: yoink('d'), class: 'arrow' });
+        .attr({ id: yoink('id'), d: yoink('d'), class: 'arrow', style: 'fill-opacity: 0.2' });
 
     // render region labels
     svg.append('text')

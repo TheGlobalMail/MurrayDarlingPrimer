@@ -1,4 +1,4 @@
-define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
+define(['lodash', 'jquery', 'd3', 'accounting', 'jquery.scrollwatch'], function(_, $, d3, accounting) {
   'use strict';
 
   var colorMap = {
@@ -27,6 +27,7 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
     $graph.css('height', graphHeight);
     var graph = d3.select('#livestock-water-use-chart')
       .append('svg')
+      .attr('class', 'bar-graph')
       .attr('width', graphWidth)
       .attr('height', graphHeight);
 
@@ -55,6 +56,16 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
       .attr('height', barHeight)
       .attr('fill', 'url(#barstripesbackground)');
 
+    g.append('text')
+      .attr({
+        y: function(d, i) { return i * totalRowHeight + 14 },
+        x: graphWidth,
+        'text-anchor': 'end',
+        class: 'bar-amount',
+        style: function(d, i) { return i === 0 ? 'font-weight: bold' : ''; }
+      })
+      .text(function(d) { return accounting.formatNumber(d.amount) + " ML"; });
+
     var bars = g.append('rect')
       .attr('y', barY)
       .attr('x', imageWidth)
@@ -81,7 +92,7 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
     g.append('text')
       .attr('y', function(d, i) { return i * totalRowHeight + 14; })
       .attr('x', imageWidth)
-      .attr('class', 'produce-name')
+      .attr('class', 'bar-label')
       .text(yoink('name', function(t) { return t.toUpperCase(); }));
   }
 
