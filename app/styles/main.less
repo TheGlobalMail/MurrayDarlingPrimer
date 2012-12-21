@@ -95,7 +95,6 @@ h2.strikeout {
     margin-top: 24px;
     height: 890px;
     min-width: 300px;
-    .box-shadow(0 5px 10px rgba(0,0,0,0.3));
 
     .drop {
         position: absolute;
@@ -164,6 +163,8 @@ h2.strikeout {
 
 #main {
     line-height: 1.4;
+    .box-shadow(inset 0 5px 10px rgba(0,0,0,0.3));
+    position: relative; // position so header drop goes behind :)
 }
 
 #river-container {

@@ -72,6 +72,7 @@ if (window.isMobileSafari) {
 }());
 
 require([
+  'intro-drop',
   'basin-size',
   'production-percentage-chart',
   'river-system-length',
