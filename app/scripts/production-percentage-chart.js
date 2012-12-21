@@ -28,7 +28,7 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
 
   function init(graphWidth) {
     $graph.empty();
-    var totalRowHeight = 40;
+    var totalRowHeight = 42;
     var barHeight = 14;
     graphWidth = graphWidth || 540;
     var imageWidth = 44;
@@ -85,6 +85,17 @@ define(['lodash', 'jquery', 'd3', 'jquery.scrollwatch'], function(_, $, d3) {
           bars.attr('width', 0)
         }
       }).handleScroll();
+
+    g.append('text')
+      .attr({
+        x: graphWidth,
+        y: function(d, i) { return i * totalRowHeight + 14; },
+        class: 'produce-percentage',
+        width: 120,
+        'text-anchor': 'end'
+      })
+      .text(function(d, i) { return d.percentage + '%' });
+
 
     // stores widths of labels for 'note' rendering
     var textWidths = [];

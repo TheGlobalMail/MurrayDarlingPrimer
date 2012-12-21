@@ -95,7 +95,6 @@ h2.strikeout {
     margin-top: 24px;
     height: 890px;
     min-width: 300px;
-    .box-shadow(0 5px 10px rgba(0,0,0,0.3));
 
     .drop {
         position: absolute;
@@ -164,6 +163,8 @@ h2.strikeout {
 
 #main {
     line-height: 1.4;
+    .box-shadow(inset 0 5px 10px rgba(0,0,0,0.3));
+    position: relative; // position so header drop goes behind :)
 }
 
 #river-container {
@@ -402,11 +403,7 @@ h2.strikeout {
         position: absolute;
         top: 80px;
         left: 0;
-        width: 255px;
-        span {
-        display: inline;
-        font-weight: bold;
-        }
+        width: 297px;
     }
 
     .map {
@@ -441,7 +438,7 @@ h2.strikeout {
     }
 
     @mapOffsetTop: 0px;
-    @mapOffsetLeft: 235px;
+    @mapOffsetLeft: 202px;
 
     .murray-map {
         top: 100px + @mapOffsetTop;
@@ -487,17 +484,26 @@ h2.strikeout {
     }
 }
 
-#production-percentage-chart {
+#production-percentage-chart, .bar-graph {
     margin-top: 16px;
 
-    .produce-name {
+    .produce-name, .bar-label {
         font-weight: bold;
         .font-size(12);
     }
 
     .produce-note {
-      font-style: italic;
-      .font-size(12);
+        font-style: italic;
+        .font-size(12);
+    }
+
+    .produce-percentage, .bar-amount {
+        fill: #c1c1c1;
+        .font-size(18);
+    }
+
+    .produce-percentage {
+        font-weight: bold;
     }
 }
 
@@ -510,13 +516,16 @@ h2.strikeout {
     position: relative;
     figure {
         height: 280px;
+
         figcaption {
-        position: absolute;
+          position: absolute;
+        }
     }
-    }
+
     h3 {
         position: absolute;
         width: 26%;
+
         span {
             display: inline;
         }
@@ -697,7 +706,7 @@ h2.strikeout {
 
 
 
-#content-container section#environment {
+#environment {
     background: #253039 url(/images/enviro-bg.jpg) no-repeat top center;
     background-size: 100%;
     margin-bottom: 0;
