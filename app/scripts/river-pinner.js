@@ -17,9 +17,9 @@ define(['jquery', 'lodash'], function($, _) {
 
   var riverPinPoints = {
     "introduction": 0,
-    "crops": 1370,
-    "livestock": 2930,
-    "rest": 4516
+    "crops": 1290,
+    "livestock": 2880,
+    "rest": 4470
   };
 
   function cacheOffsets() {
@@ -55,7 +55,7 @@ define(['jquery', 'lodash'], function($, _) {
   }
 
   function percentageCalc(offset, scrollTop) {
-    var halfwayOffset = offset.top + (offset.bottom - offset.top) * 0.9;
+    var halfwayOffset = offset.top + (offset.bottom - offset.top) * 0.80;
 
     if (scrollTop <= halfwayOffset) {
       return 0;
