@@ -74,7 +74,7 @@
     // render arrows
     svg.append('g')
       .selectAll('path').data(arrows).enter().append('path')
-        .attr({ id: yoink('id'), d: yoink('d'), class: 'arrow', style: 'fill-opacity: 0.2' });
+        .attr({ id: yoink('id'), d: yoink('d'), class: 'arrow', style: 'fill-opacity: 0.95' });
 
     // render region labels
     svg.append('text')
