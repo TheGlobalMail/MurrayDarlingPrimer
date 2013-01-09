@@ -48,6 +48,8 @@
     return _.extend(offset, { key: foundKey });
   };
 
+  // calculate was a percentage how far current is between start and end
+  // ie start = 1, end = 4, current = 2.5 returns 0.5 because 2.5 is halfway between 1 and 4
   function progressBetween(start, end, current) {
     var distance = end - start;
     var progress = current - start;
@@ -102,7 +104,7 @@
         return;
       }
 
-      // section of the top, pin the river
+      // section at the top, pin the river
       if (offset.top < scrollTop && offset.bottom > scrollBottom) {
         $river.css({
           position: 'fixed',
@@ -119,8 +121,6 @@
           position: 'absolute',
           top: offset.top - riverPinPoints[key] - contentOffset
         });
-        running = false;
-        return;
       }
 
       running = false;
@@ -150,8 +150,7 @@
 
   $window.on('resize', _.throttle(run, 200));
 
-  $(function() {
-    run();
-  });
+  $(run);
+  $window.on('load', cacheOffsets);
 
 }(jQuery, _));
