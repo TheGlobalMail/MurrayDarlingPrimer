@@ -1,4 +1,4 @@
-define(['d3', 'lodash', 'jquery', 'accounting', 'jquery.scrollwatch'], function(d3, _, $, accounting) {
+(function(d3, _, $, accounting) {
   'use strict';
 
   var data = [
@@ -121,4 +121,4 @@ define(['d3', 'lodash', 'jquery', 'accounting', 'jquery.scrollwatch'], function(
   $(window).on('orientationchange', render);
 
   return init;
-});
+}(d3, _, jQuery, accounting));

@@ -113,7 +113,7 @@ module.exports = function( grunt ) {
     rev: {
       js: 'scripts/**/*.js',
       css: 'styles/**/*.css',
-      img: 'images/**'
+      img: ''
     },
 
     // usemin handler should point to the file containing
@@ -135,7 +135,7 @@ module.exports = function( grunt ) {
 
     // Optimizes JPGs and PNGs (with jpegtran & optipng)
     img: {
-      dist: '<config:rev.img>'
+      dist: 'images/**'
     },
 
     // rjs configuration. You don't necessarily need to specify the typical
@@ -148,7 +148,7 @@ module.exports = function( grunt ) {
     rjs: {
       // no minification, is done by the min task
       optimize: 'none',
-      baseUrl: './scripts',
+      baseUrl: 'app/scripts',
       wrap: true,
       name: 'main'
     },
@@ -162,6 +162,25 @@ module.exports = function( grunt ) {
     min: {
       dist: ''
     }
+  });
+
+  // usemin:post:* are the global replace handlers, they delegate the regexp
+  // replace to the replace helper.
+  grunt.registerHelper('usemin:post:html', function(content) {
+    grunt.log.verbose.writeln('Update the HTML to reference our concat/min/revved script files');
+    content = grunt.helper('replace', content, /<script.+src=['"](.+)["'][\/>]?><[\\]?\/script>/gm);
+
+    grunt.log.verbose.writeln('Update the HTML with the new css filenames');
+    content = grunt.helper('replace', content, /<link[^\>]+href=['"]([^"']+)["']/gm);
+
+    grunt.log.verbose.writeln('Update the HTML with anchors images');
+    content = grunt.helper('replace', content, /<a[^\>]+href=['"]([^"']+)["']/gm);
+
+    return content;
+  });
+
+  grunt.registerHelper('usemin:post:css', function(content) {
+    return content;
   });
 
   // Alias the `test` task to run the `mocha` task instead

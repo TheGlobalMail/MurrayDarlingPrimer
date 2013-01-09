@@ -1,4 +1,4 @@
-define(['jquery', 'jquery.scrollwatch'], function($) {
+(function($) {
   'use strict';
 
   var $france = $('.france-map.map').fadeTo(0, 0);
@@ -12,4 +12,4 @@ define(['jquery', 'jquery.scrollwatch'], function($) {
       }
     });
 
-});
+}(jQuery));

@@ -1,4 +1,4 @@
-define(['jquery', 'd3'], function($, d3) {
+(function($, d3) {
   'use strict';
 
   var $drop = $('.drop');
@@ -98,4 +98,4 @@ define(['jquery', 'd3'], function($, d3) {
   $window.on('scroll', run);
   run();
 
-});
+}(jQuery, d3));
