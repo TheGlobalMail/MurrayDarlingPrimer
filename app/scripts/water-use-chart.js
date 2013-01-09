@@ -1,4 +1,4 @@
-define(['lodash', 'jquery', 'd3', 'accounting', 'jquery.scrollwatch'], function(_, $, d3, accounting) {
+(function(_, $, d3, accounting) {
   'use strict';
 
   var colorMap = {
@@ -109,4 +109,4 @@ define(['lodash', 'jquery', 'd3', 'accounting', 'jquery.scrollwatch'], function(
   }
 
   $(window).on('orientationchange', render);
-});
+}(_, jQuery, d3, accounting));

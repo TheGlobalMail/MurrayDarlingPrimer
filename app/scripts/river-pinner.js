@@ -1,4 +1,4 @@
-define(['jquery', 'lodash'], function($, _) {
+(function($, _) {
   'use strict';
 
   var $river  = $('#river');
@@ -154,4 +154,4 @@ define(['jquery', 'lodash'], function($, _) {
     run();
   });
 
-});
+}(jQuery, _));

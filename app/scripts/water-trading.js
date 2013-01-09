@@ -1,4 +1,4 @@
-define(['d3', 'jquery', 'lodash'], function(d3, $, _) {
+(function(d3, $, _) {
   'use strict';
 
   var $vis = $('#water-trading-vis');
@@ -135,4 +135,4 @@ define(['d3', 'jquery', 'lodash'], function(d3, $, _) {
 
   render($vis.width());
 
-});
+}(d3, jQuery, _));
